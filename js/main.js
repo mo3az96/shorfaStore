@@ -161,4 +161,83 @@ $(document).ready(function () {
       $(".otp_btn-content").hide();
     }
   }
+
+  // Archive Filter
+  $(".archive_dropdown-btn").click(function () {
+    let nextSibling = $(this).next(".archive_dropdown-list");
+    $(".archive_dropdown-btn").not(this).removeClass("active");
+    $(".archive_dropdown-list").not(nextSibling).slideUp();
+    $(this).toggleClass("active");
+    $(nextSibling).slideToggle();
+  });
+  $(".filter-btn").click(function () {
+    let parent = $(this).parents(".filter-form");
+    $(parent).find(".archive_dropdown-btn").removeClass("active");
+    $(parent).find(".archive_dropdown-list").slideUp();
+  });
+
+  // Checkboxes
+  $("#all").on("change", function () {
+    $('#filterBox input[type="checkbox"]')
+      .not(this)
+      .prop("checked", this.checked);
+  });
+
+  $("#filterBox").on("change", 'input[type="checkbox"]', function () {
+    if (this.id === "all") return;
+
+    const id = this.id,
+      checked = this.checked;
+    $(`[data-parent="${id}"] input[type="checkbox"]`)
+      .prop("checked", checked)
+      .trigger("change");
+
+    const parent = $(this).closest("[data-id]").data("parent");
+    if (parent) {
+      const group = $(`[data-parent="${parent}"] input[type="checkbox"]`);
+      $(`#${parent}`).prop(
+        "checked",
+        group.length === group.filter(":checked").length
+      );
+    }
+
+    const boxes = $('#filterBox input[type="checkbox"]').not("#all");
+    $("#all").prop("checked", boxes.length === boxes.filter(":checked").length);
+  });
+
+  // Price
+  const slider = document.getElementById("price-slider");
+  if (slider) {
+    const [min, max] = [
+      +$(slider).data("min-price"),
+      +$(slider).data("max-price"),
+    ];
+    const dir = document.documentElement.dir || "ltr";
+    const symbol = dir === "rtl" ? "ر.س" : "R.S";
+    const inputs = [
+      document.getElementById("min-price"),
+      document.getElementById("max-price"),
+    ];
+
+    noUiSlider.create(slider, {
+      start: [min, max],
+      connect: true,
+      tooltips: [true, true].map(() => ({
+        to: (v) => `${~~v} ${symbol}`,
+      })),
+      step: 1,
+      range: { min, max },
+    });
+
+    slider.noUiSlider.on("update", (values, handle) => {
+      inputs[handle].value = values[handle];
+    });
+
+    // Reset slider when form resets
+    slider.closest("form")?.addEventListener("reset", () => {
+      setTimeout(() => {
+        slider.noUiSlider.set([min, max]);
+      });
+    });
+  }
 });
