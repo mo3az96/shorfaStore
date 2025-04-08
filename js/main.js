@@ -240,4 +240,20 @@ $(document).ready(function () {
       });
     });
   }
+
+  // Single Product Slider
+  let singleProductSwiper = new Swiper(".product_gallery-slider .swiper", {
+    loop: true,
+    speed: 500,
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: ".product_gallery-slider .slider-pagination",
+      clickable: true,
+    },
+  });
 });
