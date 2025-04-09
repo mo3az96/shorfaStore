@@ -371,6 +371,9 @@ html[dir=ltr] select {
 .form-group {
   margin-bottom: 20px;
 }
+.form-group:last-child {
+  margin-bottom: 0;
+}
 
 .form-grid {
   display: grid;
@@ -391,6 +394,9 @@ html[dir=ltr] select {
   .product_single-form .form-grid {
     grid-template-columns: 1fr;
   }
+}
+.form-grid .form-group:last-child {
+  margin-bottom: 15px;
 }
 @media (max-width: 767px) {
   .form-grid {
@@ -493,7 +499,7 @@ html[dir=rtl] .form-control {
   border: 2px solid var(--primaryColor);
   border-radius: 5px;
   width: 22px;
-  aspect-ratio: 1;
+  height: 22px;
   transition: all 0.3s ease-in-out;
 }
 .custom-checkbox .checkmark::after {
@@ -2936,7 +2942,7 @@ html[dir=ltr] .footer-list a:hover {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: center;
   align-items: start;
   gap: 20px;
 }
@@ -2967,6 +2973,11 @@ html[dir=ltr] .footer-list a:hover {
   .cart-item .product_cart-item {
     flex-direction: column;
     justify-content: center;
+  }
+  .checkout-page .cart-item .product_cart-item {
+    gap: 10px;
+    flex-direction: row;
+    justify-content: start;
   }
 }
 .cart-item .product_cart-item .product-img {
@@ -3162,4 +3173,245 @@ html[dir=ltr] .footer-list a:hover {
 .cart-btns .secondary-btn {
   background-color: #a5a5a5;
   color: #fff;
+}
+
+.checkout-content {
+  padding: 30px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 991px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.checkout-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.totals-card .totals-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 13px;
+}
+.totals-card .totals-head .totals-title {
+  margin: 0;
+}
+.totals-card .totals-link {
+  font-size: 12px;
+  color: #fff;
+  background-color: var(--primaryColor);
+  border-radius: 4px;
+  padding: 0 12px;
+  height: 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.totals-card .totals-link:focus {
+  color: #fff;
+}
+.totals-card .totals-link:hover {
+  background-color: var(--secondaryColor);
+  color: #fff;
+}
+
+.checkout_address-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.checkout_address-item {
+  cursor: pointer;
+}
+.checkout_address-item .address-info {
+  border-radius: 6px;
+  border: 1px solid #f6f6f6;
+  padding: 9px 15px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 6px;
+}
+.checkout_address-item .checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primaryColor);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+}
+.checkout_address-item .checkmark::after {
+  content: "\f00c";
+  color: #fff;
+  font-weight: 400;
+  font-family: "Font Awesome 6 Pro";
+  font-size: 12px;
+  transform: rotate(360deg) scale(0);
+  transition: all 0.3s ease-in-out;
+}
+.checkout_address-item .address-title {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  padding-inline-end: 9px;
+  color: var(--secondaryText);
+  transition: all 0.3s ease-in-out;
+}
+.checkout_address-item .address-tools {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  margin-inline-start: auto;
+}
+.checkout_address-item .address-tool {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color);
+  border-radius: 6px;
+  fill: var(--color);
+  stroke: var(--color);
+  color: var(--color);
+  transition: all 0.3s ease-in-out;
+}
+.checkout_address-item .address-tool:focus {
+  fill: var(--color);
+  stroke: var(--color);
+  color: var(--color);
+}
+.checkout_address-item .address-tool:hover {
+  background-color: var(--color);
+  fill: #fff;
+  stroke: #fff;
+  color: #fff;
+}
+.checkout_address-item .address-edit {
+  --color: var(--secondaryText);
+}
+.checkout_address-item .address-delete {
+  --color: var(--redColor);
+}
+.checkout_address-item input {
+  display: none;
+}
+.checkout_address-item input:checked ~ .address-info .checkmark {
+  background-color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+.checkout_address-item input:checked ~ .address-info .checkmark::after {
+  transform: rotate(0deg) scale(1);
+}
+.checkout_address-item input:checked ~ .address-info .address-title {
+  color: var(--primaryText);
+}
+
+.shipTo .form-tools {
+  margin-bottom: 0;
+}
+.shipTo .shipTo-info {
+  padding-top: 13px;
+}
+.shipTo .form-group {
+  margin-bottom: 15px;
+}
+.shipTo .form-grid .form-group:last-child {
+  margin-bottom: 15px;
+}
+
+.checkout-radios {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+.checkout-radios.shipping-radios {
+  gap: 20px;
+}
+.checkout-radios.shipping-radios .checkout-radio {
+  width: calc(33.3333333333% - 13.3333333333px);
+  min-width: 150px;
+  max-width: 186px;
+}
+.checkout-radios.payment-radios {
+  gap: 20px 40px;
+}
+@media (max-width: 767px) {
+  .checkout-radios.payment-radios {
+    gap: 20px;
+  }
+}
+.checkout-radios .checkout-radio {
+  display: flex;
+  align-items: start;
+  gap: 6px;
+  cursor: pointer;
+}
+.checkout-radios .checkout-radio .checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primaryColor);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+}
+.checkout-radios .checkout-radio .checkmark::after {
+  content: "\f00c";
+  color: #fff;
+  font-weight: 400;
+  font-family: "Font Awesome 6 Pro";
+  font-size: 10px;
+  transform: rotate(360deg) scale(0);
+  transition: all 0.3s ease-in-out;
+}
+.checkout-radios .checkout-radio .radio-info {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 5px;
+  width: 100%;
+}
+.checkout-radios .checkout-radio .radio-title {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--primaryText);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0;
+}
+.checkout-radios .checkout-radio .radio-value {
+  color: var(--primaryColor);
+  font-size: 13px;
+  font-weight: 500;
+}
+.checkout-radios .checkout-radio input {
+  display: none;
+}
+.checkout-radios .checkout-radio input:checked ~ .checkmark {
+  background-color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+.checkout-radios .checkout-radio input:checked ~ .checkmark::after {
+  transform: rotate(0) scale(1);
 }/*# sourceMappingURL=main.css.map */

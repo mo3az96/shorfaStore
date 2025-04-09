@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <title>Client Store | Cart</title>
+    <title>Client Store | Checkout</title>
     <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
@@ -191,10 +191,10 @@
     <!-- End Header -->
 
     <!-- Start Page Content -->
-    <section class="page-section cart-page">
+    <section class="page-section checkout-page">
       <div class="container">
         <div class="page-content">
-          <h1 class="page-title">سلة المشتريات</h1>
+          <h1 class="page-title">شراء</h1>
           <div class="cart-content">
             <div class="cart-item">
               <div class="product_cart-item">
@@ -206,7 +206,6 @@
                     <h3 class="product-title">
                       <a href="product_single.html">قسيمة شرائية</a>
                     </h3>
-                    <span class="product-options"> أسود, 120GB</span>
                     <div class="product-qty">
                       <button
                         class="qty-btn"
@@ -238,206 +237,11 @@
                     <span class="product-offer"> عرض اليوم: خصم 10% </span>
                   </div>
                 </div>
-                <button class="product-remove">
-                  <i class="far fa-times"></i>
-                </button>
-              </div>
-              <div class="product-form">
-                <div class="form-group">
-                  <label class="form-label"> اللون </label>
-                  <select class="form-control">
-                    <option value="value1">أسود</option>
-                    <option value="value2">أحمر</option>
-                    <option value="value3">أحمر</option>
-                    <option value="value4">فضى</option>
-                    <option value="value5">ذهبى</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label class="form-label"> الحجم </label>
-                  <select class="form-control">
-                    <option value="value1">120GB</option>
-                    <option value="value2">120GB</option>
-                    <option value="value3">120GB</option>
-                    <option value="value4">120GB</option>
-                    <option value="value5">120GB</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item">
-              <div class="product_cart-item">
-                <a href="product_single.html" class="product-img">
-                  <img src="images/products/3.jpg" class="img-cover" />
-                </a>
-                <div class="product-text">
-                  <div class="product-info">
-                    <h3 class="product-title">
-                      <a href="product_single.html">قسيمة شرائية</a>
-                    </h3>
-                    <span class="product-options"> أسود, 120GB</span>
-                    <div class="product-qty">
-                      <button
-                        class="qty-btn"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                      >
-                        <i class="far fa-plus"></i>
-                      </button>
-                      <input
-                        type="number"
-                        class="qty-input"
-                        value="1"
-                        min="1"
-                        max="10"
-                        readonly
-                      />
-                      <button
-                        class="qty-btn"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                      >
-                        <i class="far fa-minus"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="product-price">
-                    <p>
-                      <strong>150.00 ر.س</strong>
-                      <del>180.00 ر.س</del>
-                    </p>
-                    <span class="product-offer"> عرض اليوم: خصم 10% </span>
-                  </div>
-                </div>
-                <button class="product-remove">
-                  <i class="far fa-times"></i>
-                </button>
-              </div>
-              <div class="product-form">
-                <div class="form-group">
-                  <label class="form-label"> اللون </label>
-                  <select class="form-control">
-                    <option value="value1">أسود</option>
-                    <option value="value2">أحمر</option>
-                    <option value="value3">أحمر</option>
-                    <option value="value4">فضى</option>
-                    <option value="value5">ذهبى</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label class="form-label"> الحجم </label>
-                  <select class="form-control">
-                    <option value="value1">120GB</option>
-                    <option value="value2">120GB</option>
-                    <option value="value3">120GB</option>
-                    <option value="value4">120GB</option>
-                    <option value="value5">120GB</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item">
-              <div class="product_cart-item">
-                <a href="product_single.html" class="product-img">
-                  <img src="images/products/3.jpg" class="img-cover" />
-                </a>
-                <div class="product-text">
-                  <div class="product-info">
-                    <h3 class="product-title">
-                      <a href="product_single.html">قسيمة شرائية</a>
-                    </h3>
-                    <div class="product-qty">
-                      <button
-                        class="qty-btn"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                      >
-                        <i class="far fa-plus"></i>
-                      </button>
-                      <input
-                        type="number"
-                        class="qty-input"
-                        value="1"
-                        min="1"
-                        max="10"
-                        readonly
-                      />
-                      <button
-                        class="qty-btn"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                      >
-                        <i class="far fa-minus"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="product-price">
-                    <p>
-                      <strong>150.00 ر.س</strong>
-                      <del>180.00 ر.س</del>
-                    </p>
-                    <span class="product-offer"> عرض اليوم: خصم 10% </span>
-                  </div>
-                </div>
-                <button class="product-remove">
-                  <i class="far fa-times"></i>
-                </button>
-              </div>
-            </div>
-            <div class="cart-item">
-              <div class="product_cart-item">
-                <a href="product_single.html" class="product-img">
-                  <img src="images/products/3.jpg" class="img-cover" />
-                </a>
-                <div class="product-text">
-                  <div class="product-info">
-                    <h3 class="product-title">
-                      <a href="product_single.html">قسيمة شرائية</a>
-                    </h3>
-                    <div class="product-qty">
-                      <button
-                        class="qty-btn"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                      >
-                        <i class="far fa-plus"></i>
-                      </button>
-                      <input
-                        type="number"
-                        class="qty-input"
-                        value="1"
-                        min="1"
-                        max="10"
-                        readonly
-                      />
-                      <button
-                        class="qty-btn"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                      >
-                        <i class="far fa-minus"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="product-price">
-                    <p>
-                      <strong>150.00 ر.س</strong>
-                      <del>180.00 ر.س</del>
-                    </p>
-                    <span class="product-offer"> عرض اليوم: خصم 10% </span>
-                  </div>
-                </div>
-                <button class="product-remove">
-                  <i class="far fa-times"></i>
-                </button>
               </div>
             </div>
           </div>
-          <div class="totals-content">
-            <div class="totals-cards">
-              <div class="totals-card">
-                <div class="form-group">
-                  <label class="form-label"> أضف ملاحظتك </label>
-                  <textarea
-                    class="form-control"
-                    placeholder="ادخل ملاحظتك"
-                  ></textarea>
-                </div>
-              </div>
+          <div class="checkout-content">
+            <div class="checkout-col">
               <div class="totals-card">
                 <div class="form-group">
                   <label class="form-label">
@@ -451,29 +255,210 @@
                   />
                 </div>
               </div>
+              <div class="totals-card">
+                <div class="totals-head">
+                  <h4 class="totals-title">ملخص الطلب</h4>
+                  <a href="#!" class="totals-link">أضف عنوان</a>
+                </div>
+                <div class="checkout_address-list">
+                  <label class="checkout_address-item">
+                    <input type="radio" name="address" />
+                    <div class="address-info">
+                      <span class="checkmark"></span>
+                      <span class="address-title">
+                        30 شارع طاهر الجزائري,مقابل طوبكابي,مكة المكرمة
+                      </span>
+                      <div class="address-tools">
+                        <a href="#!" class="address-tool address-edit">
+                          <img src="images/icons/edit.svg" class="svg" />
+                        </a>
+                        <a href="#!" class="address-tool address-delete">
+                          <img src="images/icons/delete.svg" class="svg" />
+                        </a>
+                      </div>
+                    </div>
+                  </label>
+                  <label class="checkout_address-item">
+                    <input type="radio" name="address" />
+                    <div class="address-info">
+                      <span class="checkmark"></span>
+                      <span class="address-title">
+                        95 شارع ناصر بن حعوان,بجوار مطعم زهرة التنور ,حفر الباطن
+                      </span>
+                      <div class="address-tools">
+                        <a href="#!" class="address-tool address-edit">
+                          <img src="images/icons/edit.svg" class="svg" />
+                        </a>
+                        <a href="#!" class="address-tool address-delete">
+                          <img src="images/icons/delete.svg" class="svg" />
+                        </a>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="totals-card shipTo">
+                <div class="form-tools">
+                  <div class="custom-checkbox">
+                    <label>
+                      <input type="checkbox" id="shipTo" />
+                      <span class="checkmark"></span>
+                      <span class="checktext">استلام الطلب عبر شخص آخر</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="shipTo-info" id="shipToForm" style="display: none">
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="اسم المستلم"
+                    />
+                  </div>
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        type="tel"
+                        placeholder="رقم الجوال"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        type="email"
+                        placeholder="البريد الإلكتروني"
+                      />
+                    </div>
+                  </div>
+                  <div class="custom-checkbox">
+                    <label>
+                      <input type="checkbox" value="" />
+                      <span class="checkmark"></span>
+                      <span class="checktext">استلام رسائل إشعارات الطلب</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="totals-card">
-              <h4 class="totals-title">ملخص الطلب</h4>
-              <div class="total-item">
-                <span class="title">قيمة المنتجات</span>
-                <span class="value">300.00 ر.س</span>
+            <div class="checkout-col">
+              <div class="totals-card">
+                <h4 class="totals-title">حدد شركة الشحن الخاصة بطلبك</h4>
+                <div class="checkout-radios shipping-radios">
+                  <label class="checkout-radio">
+                    <input type="radio" name="shipping" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">
+                        سمسا
+                        <span> خلال 10 أيام </span>
+                      </p>
+                      <span class="radio-value"> 20.00 ر.س </span>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="shipping" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">
+                        أرامكس
+                        <span> خلال 10 أيام </span>
+                      </p>
+                      <span class="radio-value"> 20.00 ر.س </span>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="shipping" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">
+                        أي مكان
+                        <span> خلال 10 أيام </span>
+                      </p>
+                      <span class="radio-value"> 20.00 ر.س </span>
+                    </div>
+                  </label>
+                </div>
               </div>
-              <div class="total-item">
-                <span class="title">قيمة الخصم</span>
-                <span class="value">30.00 ر.س</span>
+              <div class="totals-card">
+                <h4 class="totals-title">طريقة الدفع</h4>
+                <div class="checkout-radios payment-radios">
+                  <label class="checkout-radio">
+                    <input type="radio" name="payment" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">فيزا</p>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="payment" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">ماستر</p>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="payment" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">أبل باي</p>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="payment" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">المحفظة</p>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="payment" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">عند الاستلام</p>
+                    </div>
+                  </label>
+                </div>
               </div>
-              <div class="total-item">
-                <span class="title">قيمة الشحن</span>
-                <span class="value">30.00 ر.س</span>
+              <div class="totals-card">
+                <div class="form-group">
+                  <label class="form-label"> أضف ملاحظتك </label>
+                  <textarea
+                    class="form-control"
+                    placeholder="ادخل ملاحظتك"
+                  ></textarea>
+                </div>
               </div>
-              <div class="total-item">
-                <span class="title">الإجمالي</span>
-                <span class="value">300.00 ر.س</span>
+              <div class="totals-card">
+                <h4 class="totals-title">ملخص الطلب</h4>
+                <div class="total-item">
+                  <span class="title">قيمة المنتجات</span>
+                  <span class="value">300.00 ر.س</span>
+                </div>
+                <div class="total-item">
+                  <span class="title">قيمة الخصم</span>
+                  <span class="value">30.00 ر.س</span>
+                </div>
+                <div class="total-item">
+                  <span class="title">قيمة الشحن</span>
+                  <span class="value">30.00 ر.س</span>
+                </div>
+                <div class="total-item">
+                  <span class="title">الإجمالي</span>
+                  <span class="value">300.00 ر.س</span>
+                </div>
               </div>
             </div>
           </div>
           <div class="cart-btns btns-content">
-            <a href="checkout.html" class="default-btn"> استكمال الطلب </a>
+            <a
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#successModal"
+              class="default-btn"
+            >
+              إرسال الطلب
+            </a>
             <a href="index.html" class="default-btn secondary-btn">
               إلغاء الطلب
             </a>
@@ -557,6 +542,27 @@
       </div>
     </footer>
     <!-- End Footer -->
+
+    <!-- Start Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="success-content">
+              <i class="fas fa-check-circle fa-sharp"></i>
+              <h2 class="modal-title">تم إرسال الطلب بنجاح</h2>
+              <div class="btns-content">
+                <a href="orders.html" class="form-submit secondary-btn">
+                  متابعة الطلب
+                </a>
+                <a href="index.html" class="form-submit"> العودة للرئيسية </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -565,5 +571,18 @@
     <script src="js/nouislider.min.js"></script>
     <script src="js/svg.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#shipTo").change(function (e) {
+          e.preventDefault();
+          if ($(this).is(":checked")) {
+            $("#shipToForm").slideDown();
+          } else {
+            $("#shipToForm").slideUp();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
