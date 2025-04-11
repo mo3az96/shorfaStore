@@ -120,6 +120,24 @@ $(document).ready(function () {
     }
   });
 
+  // Telephone
+  $(".country_key-btn").click(function () {
+    $(this).next(".country_key-list").toggle();
+  });
+
+  $(".tel-content .form-control").click(function () {
+    $(".country_key-list").hide();
+  });
+
+  $(".country_key-list button").click(function () {
+    $(".country_key-list button").removeClass("active");
+    $(this).addClass("active");
+    $(this).parents(".country_key-list").hide();
+
+    let ele = $(this).find("span").html();
+    $(".country_key-btn").html(ele);
+  });
+  
   // otp
   $(".otp-input").on("input", function () {
     var $this = $(this);

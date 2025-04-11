@@ -444,13 +444,16 @@ html[dir=ltr] select {
   color: #a0a0a0;
   font-weight: 300;
 }
+html[dir=rtl] .form-control::-moz-placeholder {
+  text-align: right;
+}
+html[dir=rtl] .form-control::placeholder {
+  text-align: right;
+}
 .form-control:focus {
   border-color: var(--primaryColor);
   outline: none;
   box-shadow: none;
-}
-html[dir=rtl] .form-control {
-  text-align: right;
 }
 
 .password-content {
@@ -603,6 +606,120 @@ html[dir=rtl] .form-control {
 }
 .form-resend:hover {
   color: var(--primaryColor);
+}
+
+.tel-content {
+  position: relative;
+}
+.tel-content .form-control {
+  padding-left: 100px;
+}
+.tel-content .country-key {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.tel-content .country-key span {
+  direction: ltr;
+  display: flex;
+  gap: 5px;
+}
+html[dir=rtl] .tel-content .country-key span {
+  flex-direction: row-reverse;
+}
+.tel-content .country_key-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 42px;
+  gap: 6px;
+  font-size: 12px;
+  color: #a0a0a0;
+  font-weight: 400;
+}
+.tel-content .country_key-btn img {
+  width: 30px;
+  aspect-ratio: 30/20;
+  border-radius: 2px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.tel-content .country_key-btn:after {
+  content: "";
+  font-family: "Font Awesome 6 Pro";
+  content: "\f107";
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tel-content .country_key-list {
+  position: absolute;
+  top: calc(100% - 7px);
+  left: 0;
+  background-color: #fff;
+  min-width: 132px;
+  border-radius: 10px;
+  border: 1px solid #f6f6f6;
+  padding: 8px 12px;
+  white-space: nowrap;
+  z-index: 2;
+  transition: none;
+  display: none;
+}
+.tel-content .country_key-list li {
+  width: 100%;
+  border-bottom: 1px solid rgba(165, 165, 165, 0.3);
+  padding: 5px 0;
+}
+.tel-content .country_key-list li:last-of-type {
+  border-bottom: none;
+}
+.tel-content .country_key-list a,
+.tel-content .country_key-list button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--secondaryText);
+  font-weight: 400;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+.tel-content .country_key-list a img,
+.tel-content .country_key-list button img {
+  width: 30px;
+  aspect-ratio: 30/18;
+  border-radius: 2px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.tel-content .country_key-list a:focus,
+.tel-content .country_key-list button:focus {
+  color: var(--secondaryText);
+}
+.tel-content .country_key-list a:hover,
+.tel-content .country_key-list button:hover {
+  color: var(--primaryColor);
+}
+.tel-content .country_key-list a.active,
+.tel-content .country_key-list button.active {
+  color: var(--primaryText);
+}
+html[dir=rtl] .tel-content .country_key-list a span,
+html[dir=rtl] .tel-content .country_key-list button span {
+  text-align: left;
+  justify-content: end;
+  width: 100%;
 }
 
 .modal-backdrop {
