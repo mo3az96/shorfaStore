@@ -121,31 +121,31 @@ $(document).ready(function () {
   });
 
   // Telephone
-  function formatState(state) {
-    if (!state.id) {
-      return state.text;
-    }
+  if ($(window).width() > 767) {
+    function formatState(state) {
+      if (!state.id) {
+        return state.text;
+      }
+      
+      const flagUrl = state.element?.dataset?.flag?.toLowerCase();
 
-    const baseUrl = "/images/flags";
-    const flagUrl = `${baseUrl}/${state.id.toLowerCase()}.svg`;
-
-    const $state = $(`
+      const $state = $(`
       <span>
         <img src="${flagUrl}" class="img-flag" />
         <i>${state.text}</i>
       </span>
     `);
 
-    return $state;
+      return $state;
+    }
+
+    $(".country-key").select2({
+      templateResult: formatState,
+      templateSelection: formatState,
+      minimumResultsForSearch: Infinity,
+      dropdownCssClass: "country_key-list",
+    });
   }
-
-  $(".country-key").select2({
-    templateResult: formatState,
-    templateSelection: formatState, 
-    minimumResultsForSearch: Infinity,
-    dropdownCssClass: "country_key-list",
-  });
-
   // otp
   $(".otp-input").on("input", function () {
     var $this = $(this);
