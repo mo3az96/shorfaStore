@@ -1568,6 +1568,9 @@ html[dir=ltr] .price-filter .noUi-target .noUi-origin {
     height: 100%;
   }
 }
+.main_slider-custom:not(:has(.main_slider-text)) .main_slider-img {
+  margin-inline: auto;
+}
 
 .categories-slider .swiper {
   overflow: unset;
