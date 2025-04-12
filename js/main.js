@@ -19,9 +19,9 @@ $(document).ready(function () {
     speed: 500,
     slidesPerView: "auto",
     centeredSlides: true,
-    autoplay: {
-      delay: 5000,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    // },
     breakpoints: {
       0: {
         spaceBetween: 10,
