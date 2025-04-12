@@ -1284,6 +1284,7 @@ html[dir=ltr] .price-filter .noUi-target .noUi-origin {
   transition: all 0.3s ease-in-out;
   fill: var(--color);
   stroke: var(--color);
+  color: var(--color);
 }
 .product-tools .product-btn span {
   font-size: 14px;
@@ -1295,6 +1296,7 @@ html[dir=ltr] .price-filter .noUi-target .noUi-origin {
   background-color: var(--color);
   fill: #fff;
   stroke: #fff;
+  color: #fff;
 }
 .product-tools .product-btn:hover span {
   color: #fff;
