@@ -126,7 +126,7 @@ $(document).ready(function () {
       if (!state.id) {
         return state.text;
       }
-      
+
       const flagUrl = state.element?.dataset?.flag?.toLowerCase();
 
       const $state = $(`
@@ -283,3 +283,15 @@ $(document).ready(function () {
     },
   });
 });
+// User Image
+function profileImg(input) {
+  const $img = $(".user-img-name img");
+  const file = input.files?.[0];
+
+  $img.attr(
+    "src",
+    file
+      ? (window.URL || window.webkitURL).createObjectURL(file)
+      : $(input).attr("data-palceholder")
+  );
+}
