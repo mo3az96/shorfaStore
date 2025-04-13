@@ -6,15 +6,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <title>Client Store | Categories</title>
-    <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
-    <link rel="stylesheet" href="css/select2.min.css" />
-    <link rel="stylesheet" href="css/nouislider.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <title>Client Store | Wallet</title>
+    <link rel="shortcut icon" type="img/png" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../css/select2.min.css" />
+    <link rel="stylesheet" href="../css/nouislider.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
   </head>
 
   <body>
@@ -22,8 +22,8 @@
     <header class="header-section">
       <div class="container">
         <div class="header">
-          <a href="index.html" class="logo">
-            <img src="images/logo.svg" alt="logo" class="img-contain" />
+          <a href="../index.html" class="logo">
+            <img src="../images/logo.svg" alt="logo" class="img-contain" />
           </a>
           <form class="search-form">
             <div class="search-content">
@@ -40,7 +40,11 @@
                 placeholder="ابحث عن ما تريد.."
               />
               <button class="search-btn">
-                <img src="images/icons/search.svg" alt="search" class="svg" />
+                <img
+                  src="../images/icons/search.svg"
+                  alt="search"
+                  class="svg"
+                />
               </button>
             </div>
           </form>
@@ -54,7 +58,7 @@
             </a>
             <a href="#!" class="header-icon notification-icon">
               <img
-                src="images/icons/notification.svg"
+                src="../images/icons/notification.svg"
                 alt="notification"
                 class="svg"
               />
@@ -67,7 +71,7 @@
                 class="header_icon-content header_user-content dropdown-btn"
               >
                 <span class="header-icon user-icon">
-                  <img src="images/icons/user.svg" alt="user" class="svg" />
+                  <img src="../images/icons/user.svg" alt="user" class="svg" />
                 </span>
                 <div class="header_icon-text">
                   <span>أهلاً بك</span>
@@ -76,13 +80,13 @@
               </a>
               <ul class="dropdown-list user_dropdown-list">
                 <li>
-                  <a href="account/profile.html">الملف الشخصي</a>
+                  <a href="profile.html">الملف الشخصي</a>
                 </li>
                 <li>
                   <a href="#!">الطلبات</a>
                 </li>
                 <li>
-                  <a href="account/wallet.html">المحفظة</a>
+                  <a href="wallet.html">المحفظة</a>
                 </li>
                 <li>
                   <a href="#!">العناوين المحفوظة</a>
@@ -94,7 +98,7 @@
             </div>
             <a href="#!" class="header_icon-content header_cart-content">
               <span class="header-icon cart-icon">
-                <img src="images/icons/cart.svg" alt="cart" class="svg" />
+                <img src="../images/icons/cart.svg" alt="cart" class="svg" />
                 <small class="count">0</small>
               </span>
               <div class="header_icon-text">
@@ -143,37 +147,37 @@
               </div>
               <div class="dropdown-content currency-content">
                 <button class="dropdown-btn currency-btn">
-                  <img src="images/currency/sar.svg" alt="sar" />
+                  <img src="../images/currency/sar.svg" alt="sar" />
                   ريال سعودي
                 </button>
                 <ul class="dropdown-list currency-list">
                   <li>
                     <button class="active">
-                      <img src="images/currency/sar.svg" alt="sar" />
+                      <img src="../images/currency/sar.svg" alt="sar" />
                       ريال سعودي
                     </button>
                   </li>
                   <li>
                     <button>
-                      <img src="images/currency/aed.svg" alt="sar" />
+                      <img src="../images/currency/aed.svg" alt="sar" />
                       درهم إماراتي
                     </button>
                   </li>
                   <li>
                     <button>
-                      <img src="images/currency/bhd.svg" alt="sar" />
+                      <img src="../images/currency/bhd.svg" alt="sar" />
                       دينار بحريني
                     </button>
                   </li>
                   <li>
                     <button>
-                      <img src="images/currency/kwd.svg" alt="sar" />
+                      <img src="../images/currency/kwd.svg" alt="sar" />
                       دينار كويتي
                     </button>
                   </li>
                   <li>
                     <button>
-                      <img src="images/currency/qar.svg" alt="sar" />
+                      <img src="../images/currency/qar.svg" alt="sar" />
                       ريال قطري
                     </button>
                   </li>
@@ -187,109 +191,19 @@
     <!-- End Header -->
 
     <!-- Start Page Content -->
-    <section class="page-section categories-page">
+    <section class="page-section profile-page">
       <div class="container">
         <div class="page-content">
-          <div class="categories-head">
-            <h1 class="page-title">التصنيفات</h1>
-            <div class="archive-order">
-              <span>ترتيب حسب:</span>
-              <select class="order-select">
-                <option value="1">الافتراضية</option>
-                <option value="2" selected>الأحدث</option>
-                <option value="3">الأقدم</option>
-                <option value="4">الأفضل</option>
-              </select>
+          <h1 class="page-title">المحفظة</h1>
+          <div class="wallet-content">
+            <div class="wallet-icon">
+              <img src="../images/icons/wallet.svg" class="img-contain" />
             </div>
-          </div>
-          <div class="categories-grid">
-            <div class="categories_grid-item">
-              <a href="#!" class="category-item">
-                <div class="category-img">
-                  <img src="images/categories/1.png" class="img-contain" />
-                </div>
-                <h3 class="category-title">الجوالات</h3>
-              </a>
-            </div>
-            <div class="categories_grid-item">
-              <a href="#!" class="category-item">
-                <div class="category-img">
-                  <img src="images/categories/2.png" class="img-contain" />
-                </div>
-                <h3 class="category-title">أجهزة كهربائية</h3>
-              </a>
-            </div>
-            <div class="categories_grid-item">
-              <a href="#!" class="category-item">
-                <div class="category-img">
-                  <img src="images/categories/3.png" class="img-contain" />
-                </div>
-                <h3 class="category-title">اكسسوارات</h3>
-              </a>
-            </div>
-            <div class="categories_grid-item">
-              <a href="#!" class="category-item">
-                <div class="category-img">
-                  <img src="images/categories/4.png" class="img-contain" />
-                </div>
-                <h3 class="category-title">منتجات البشرة</h3>
-              </a>
-            </div>
-            <div class="categories_grid-item">
-              <a href="#!" class="category-item">
-                <div class="category-img">
-                  <img src="images/categories/5.png" class="img-contain" />
-                </div>
-                <h3 class="category-title">منتجات الشعر</h3>
-              </a>
-            </div>
-            <div class="categories_grid-item">
-              <a href="#!" class="category-item">
-                <div class="category-img">
-                  <img src="images/categories/6.png" class="img-contain" />
-                </div>
-                <h3 class="category-title">ملابس</h3>
-              </a>
-            </div>
-            <div class="categories_grid-item">
-              <a href="#!" class="category-item">
-                <div class="category-img">
-                  <img src="images/categories/7.png" class="img-contain" />
-                </div>
-                <h3 class="category-title">أحذية</h3>
-              </a>
-            </div>
-            <div class="categories_grid-item">
-              <a href="#!" class="category-item">
-                <div class="category-img">
-                  <img src="images/categories/8.png" class="img-contain" />
-                </div>
-                <h3 class="category-title">حقائب</h3>
-              </a>
-            </div>
-            <div class="categories_grid-item">
-              <a href="#!" class="category-item">
-                <div class="category-img">
-                  <img src="images/categories/9.png" class="img-contain" />
-                </div>
-                <h3 class="category-title">ساعات</h3>
-              </a>
-            </div>
-            <div class="categories_grid-item">
-              <a href="#!" class="category-item">
-                <div class="category-img">
-                  <img src="images/categories/10.png" class="img-contain" />
-                </div>
-                <h3 class="category-title">سماعات</h3>
-              </a>
-            </div>
-            <div class="categories_grid-item">
-              <a href="#!" class="category-item">
-                <div class="category-img">
-                  <img src="images/categories/11.png" class="img-contain" />
-                </div>
-                <h3 class="category-title">نظارات</h3>
-              </a>
+            <div class="wallet-info">
+              <h3 class="wallet-title">
+                الرصيد الحالي: <span> 300.00 ر.س</span>
+              </h3>
+              <button class="form-submit">شحن رصيد</button>
             </div>
           </div>
         </div>
@@ -323,7 +237,7 @@
           </div>
           <div class="footer-info">
             <div class="footer-logo">
-              <img src="images/footer_logo.svg" alt="logo" />
+              <img src="../images/footer_logo.svg" alt="logo" />
             </div>
             <p class="footer-desc">
               واحد من أهم روّاد المواقع الإلكترونية المتخصصة في مجال لبيع
@@ -337,7 +251,11 @@
               <li>
                 <a href="tel:+966 12345678">
                   <i class="icon">
-                    <img src="images/icons/phone.svg" class="svg" alt="phone" />
+                    <img
+                      src="../images/icons/phone.svg"
+                      class="svg"
+                      alt="phone"
+                    />
                   </i>
                   <span class="en"> +966 12345678 </span>
                 </a>
@@ -345,7 +263,11 @@
               <li>
                 <a href="mailto:info@example.com">
                   <i class="icon">
-                    <img src="images/icons/email.svg" class="svg" alt="email" />
+                    <img
+                      src="../images/icons/email.svg"
+                      class="svg"
+                      alt="email"
+                    />
                   </i>
                   <span class="en"> info@example.com </span>
                 </a>
@@ -371,13 +293,13 @@
       </div>
     </footer>
     <!-- End Footer -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/select2.min.js"></script>
-    <script src="js/nouislider.min.js"></script>
-    <script src="js/svg.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/select2.min.js"></script>
+    <script src="../js/nouislider.min.js"></script>
+    <script src="../js/svg.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
