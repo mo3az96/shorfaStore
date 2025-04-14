@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <title>Client Store | Archive</title>
+    <title>Client Store | Search</title>
     <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
@@ -190,6 +190,34 @@
     <section class="page-section product_archive-page">
       <div class="container">
         <div class="page-content">
+          <h1 class="page-title">نتائج البحث</h1>
+          <div class="archive-form">
+            <form class="filter-form">
+              <label class="archive-label"> عرض حسب </label>
+              <div class="show_filter-radios">
+                <div class="filter_tab-item">
+                  <input type="radio" name="show" id="products" checked />
+                  <label for="products"> المنتجات </label>
+                </div>
+                <div class="filter_tab-item">
+                  <input type="radio" name="show" id="groups" />
+                  <label for="groups"> المجموعات </label>
+                </div>
+                <div class="filter_tab-item">
+                  <input type="radio" name="show" id="digital" />
+                  <label for="digital"> المنتجات الرقمية </label>
+                </div>
+                <div class="filter_tab-item">
+                  <input type="radio" name="show" id="services" />
+                  <label for="services"> الخدمات </label>
+                </div>
+                <div class="filter_tab-item">
+                  <input type="radio" name="show" id="reservations" />
+                  <label for="reservations"> الحجوزات </label>
+                </div>
+              </div>
+            </form>
+          </div>
           <div class="archive-form">
             <form class="filter-form">
               <label class="archive-label"> فلتر حسب </label>
@@ -921,125 +949,6 @@
     </section>
     <!-- Start Page Content -->
 
-    <!-- Start Testimonials -->
-    <section class="testimonials-section home-section">
-      <div class="container">
-        <div class="testimonials-slider custom-slider">
-          <div class="slider-content">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <div class="item-container">
-                      <div class="testimonial-img">
-                        <img
-                          src="images/testimonials/1.jpg"
-                          class="img-cover"
-                        />
-                      </div>
-                      <h3 class="testimonial-name">عبدالله أحمد</h3>
-                      <div class="testimonial-rate">
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="testimonial-content">
-                        <p>متجر ممتاز</p>
-                        <span>13/5/2024</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <div class="item-container">
-                      <div class="testimonial-img">
-                        <img
-                          src="images/testimonials/3.jpg"
-                          class="img-cover"
-                        />
-                      </div>
-                      <h3 class="testimonial-name">ليلى محمد</h3>
-                      <div class="testimonial-content">
-                        <p>هل المتجر جيد؟</p>
-                        <span>13/5/2024</span>
-                      </div>
-                      <div class="testimonial-answer">
-                        <img src="images/icons/logo.svg" alt="answer" />
-                        <p>نعم</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <div class="item-container">
-                      <div class="testimonial-img">
-                        <img
-                          src="images/testimonials/2.jpg"
-                          class="img-cover"
-                        />
-                      </div>
-                      <h3 class="testimonial-name">عاصم محمد</h3>
-                      <div class="testimonial-rate">
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="testimonial-content">
-                        <p>متجر ممتاز</p>
-                        <span>13/5/2024</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <div class="item-container">
-                      <div class="testimonial-img">
-                        <img
-                          src="images/testimonials/3.jpg"
-                          class="img-cover"
-                        />
-                      </div>
-                      <h3 class="testimonial-name">ليلى محمد</h3>
-                      <div class="testimonial-content">
-                        <p>هل المتجر جيد؟</p>
-                        <span>13/5/2024</span>
-                      </div>
-                      <div class="testimonial-answer">
-                        <img src="images/icons/logo.svg" alt="answer" />
-                        <p>نعم</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slider-pagination"></div>
-        </div>
-        <div class="btns-content">
-          <a
-            type="button"
-            data-bs-toggle="modal"
-            data-bs-target="#addQuestionModal"
-            class="default-btn"
-          >
-            أضف سؤالك
-          </a>
-          <a href="testimonials.html" class="default-btn secondary-btn">
-            عرض الكل
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- End Testimonials -->
-
     <!-- Start Footer -->
     <footer class="footer-section">
       <div class="container">
@@ -1114,42 +1023,6 @@
       </div>
     </footer>
     <!-- End Footer -->
-
-    <!-- Start Modal -->
-    <div
-      class="modal fade"
-      id="addQuestionModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 class="modal-title">أضف سؤالك</h2>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="fas fa-times-circle"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="modal-from">
-              <div class="form-group">
-                <textarea
-                  class="form-control"
-                  placeholder="ادخل سؤالك"
-                ></textarea>
-              </div>
-              <button class="form-submit">إرسال</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Modal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

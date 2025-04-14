@@ -955,10 +955,13 @@ html[dir=rtl] .select2-container .country_key-list .select2-results__options {
 @media (max-width: 767px) {
   .archive-form {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     margin: 0 auto 10px;
     padding: 10px;
   }
+}
+.archive-form ~ .archive-form {
+  margin-top: 10px;
 }
 
 .filter-form {
@@ -1342,6 +1345,43 @@ html[dir=ltr] .price-filter .noUi-target .noUi-origin {
   transform: rotate(0) scale(1);
 }
 
+.show_filter-radios {
+  display: flex;
+  gap: 4px 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.filter_tab-item {
+  flex: 1;
+  max-width: 182px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+.filter_tab-item label {
+  width: 100%;
+  padding: 0 10px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: var(--primaryText);
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.filter_tab-item input {
+  display: none;
+}
+.filter_tab-item input:checked ~ label {
+  border-color: var(--primaryColor);
+  color: var(--primaryColor);
+}
+
 .product-tools {
   display: flex;
   align-items: center;
@@ -1422,6 +1462,15 @@ html[dir=ltr] .price-filter .noUi-target .noUi-origin {
 }
 .product-tools .product-fav {
   --color: var(--redColor);
+}
+.product-tools .product-fav.active {
+  background-color: var(--redColor);
+  fill: #fff;
+  stroke: #fff;
+  color: #fff;
+}
+.product-tools .product-fav.active i {
+  font-weight: 900;
 }
 .product-tools .product-share {
   --color: var(--secondaryText);

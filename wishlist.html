@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <title>Client Store | Archive</title>
+    <title>Client Store | Wishlist</title>
     <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
@@ -190,217 +190,31 @@
     <section class="page-section product_archive-page">
       <div class="container">
         <div class="page-content">
+          <h1 class="page-title">المفضلة</h1>
           <div class="archive-form">
             <form class="filter-form">
-              <label class="archive-label"> فلتر حسب </label>
-              <div class="archive_filter-dropdown">
-                <span class="archive_dropdown-btn">التصنيفات</span>
-                <div class="archive_dropdown-list">
-                  <div class="filter-box" id="filterBox">
-                    <div class="filter-category">
-                      <div class="filter-item">
-                        <input type="checkbox" id="all" />
-                        <label for="all">
-                          <span class="checkmark"></span>
-                          الكل
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="filter-category">
-                      <div class="filter-item" data-id="mobiles">
-                        <input type="checkbox" id="mobiles" />
-                        <label for="mobiles">
-                          <span class="checkmark"></span>
-                          جوالات
-                        </label>
-                      </div>
-
-                      <div
-                        class="filter-item level-1"
-                        data-id="iphone"
-                        data-parent="mobiles"
-                      >
-                        <input type="checkbox" id="iphone" />
-                        <label for="iphone">
-                          <span class="checkmark"></span>
-                          آيفون
-                        </label>
-                      </div>
-
-                      <div
-                        class="filter-item level-1"
-                        data-id="android"
-                        data-parent="mobiles"
-                      >
-                        <input type="checkbox" id="android" />
-                        <label for="android">
-                          <span class="checkmark"></span>
-                          أندرويد
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="filter-category">
-                      <div class="filter-item" data-id="electronics">
-                        <input type="checkbox" id="electronics" />
-                        <label for="electronics">
-                          <span class="checkmark"></span>
-                          أجهزة كهربائية
-                        </label>
-                      </div>
-
-                      <div
-                        class="filter-item level-1"
-                        data-id="fridge"
-                        data-parent="electronics"
-                      >
-                        <input type="checkbox" id="fridge" />
-                        <label for="fridge">
-                          <span class="checkmark"></span>
-                          ثلاجات
-                        </label>
-                      </div>
-
-                      <div
-                        class="filter-item level-2"
-                        data-id="small-fridge"
-                        data-parent="fridge"
-                      >
-                        <input type="checkbox" id="small-fridge" />
-                        <label for="small-fridge">
-                          <span class="checkmark"></span>
-                          صغيرة
-                        </label>
-                      </div>
-
-                      <div
-                        class="filter-item level-2"
-                        data-id="large-fridge"
-                        data-parent="fridge"
-                      >
-                        <input type="checkbox" id="large-fridge" />
-                        <label for="large-fridge">
-                          <span class="checkmark"></span>
-                          كبيرة
-                        </label>
-                      </div>
-
-                      <div
-                        class="filter-item level-1"
-                        data-id="washer"
-                        data-parent="electronics"
-                      >
-                        <input type="checkbox" id="washer" />
-                        <label for="washer">
-                          <span class="checkmark"></span>
-                          غسالات
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="filter-category">
-                      <div class="filter-item" data-id="headphones">
-                        <input type="checkbox" id="headphones" />
-                        <label for="headphones">
-                          <span class="checkmark"></span>
-                          سماعات
-                        </label>
-                      </div>
-                    </div>
-                  </div>
+              <label class="archive-label"> عرض حسب </label>
+              <div class="show_filter-radios">
+                <div class="filter_tab-item">
+                  <input type="radio" name="show" id="products" checked />
+                  <label for="products"> المنتجات </label>
                 </div>
-              </div>
-              <div class="archive_filter-dropdown">
-                <span class="archive_dropdown-btn">تقييم المنتج</span>
-                <div class="archive_dropdown-list">
-                  <div class="rate-box">
-                    <div class="ratestars">
-                      <input id="rate5" name="rating" type="radio" value="5" />
-                      <label class="revstar" for="rate5" title="5">
-                        <i class="fas fa-star"></i>
-                      </label>
-                      <input id="rate4" name="rating" type="radio" value="4" />
-                      <label class="revstar" for="rate4" title="4">
-                        <i class="fas fa-star"></i>
-                      </label>
-                      <input id="rate3" name="rating" type="radio" value="3" />
-                      <label class="revstar" for="rate3" title="3">
-                        <i class="fas fa-star"></i>
-                      </label>
-                      <input id="rate2" name="rating" type="radio" value="2" />
-                      <label class="revstar" for="rate2" title="2">
-                        <i class="fas fa-star"></i>
-                      </label>
-                      <input id="rate1" name="rating" type="radio" value="1" />
-                      <label class="revstar" for="rate1" title="1">
-                        <i class="fas fa-star"></i>
-                      </label>
-                    </div>
-                  </div>
+                <div class="filter_tab-item">
+                  <input type="radio" name="show" id="groups" />
+                  <label for="groups"> المجموعات </label>
                 </div>
-              </div>
-              <div class="archive_filter-dropdown">
-                <span class="archive_dropdown-btn">سعر المنتج</span>
-                <div class="archive_dropdown-list">
-                  <div class="price-box">
-                    <div class="price-filter">
-                      <div
-                        id="price-slider"
-                        class="price-slider"
-                        data-min-price="500"
-                        data-max-price="1000"
-                      ></div>
-                      <div class="values-inputs">
-                        <input id="min-price" type="number" class="min-price" />
-                        <input id="max-price" type="number" class="max-price" />
-                      </div>
-                    </div>
-                  </div>
+                <div class="filter_tab-item">
+                  <input type="radio" name="show" id="digital" />
+                  <label for="digital"> المنتجات الرقمية </label>
                 </div>
-              </div>
-              <div class="archive_form-btns">
-                <button type="submit" class="filter-btn filter-submit">
-                  عرض النتائج
-                </button>
-                <button type="reset" class="filter-btn filter-reset">
-                  إعادة تعيين
-                </button>
-              </div>
-            </form>
-            <form class="filter-form">
-              <label class="archive-label"> ترتيب حسب </label>
-              <div class="archive_filter-radios">
-                <div class="order-item">
-                  <input type="radio" name="oder" id="suggestions" />
-                  <label for="suggestions">
-                    <span class="checkmark"></span>
-                    مقترحاتنا
-                  </label>
+                <div class="filter_tab-item">
+                  <input type="radio" name="show" id="services" />
+                  <label for="services"> الخدمات </label>
                 </div>
-                <div class="order-item">
-                  <input type="radio" name="oder" id="best" />
-                  <label for="best">
-                    <span class="checkmark"></span>
-                    الأكثر مبيعاً
-                  </label>
+                <div class="filter_tab-item">
+                  <input type="radio" name="show" id="reservations" />
+                  <label for="reservations"> الحجوزات </label>
                 </div>
-                <div class="order-item">
-                  <input type="radio" name="oder" id="least" />
-                  <label for="least">
-                    <span class="checkmark"></span>
-                    الأقل مبيعاً
-                  </label>
-                </div>
-              </div>
-
-              <div class="archive_form-btns">
-                <button type="submit" class="filter-btn filter-submit">
-                  عرض النتائج
-                </button>
-                <button type="reset" class="filter-btn filter-reset">
-                  إعادة تعيين
-                </button>
               </div>
             </form>
           </div>
@@ -449,7 +263,7 @@
                       <img src="images/icons/cart.svg" class="svg" />
                       <span>إضافة للسلة</span>
                     </button>
-                    <button class="product-btn product-fav">
+                    <button class="product-btn product-fav active">
                       <i class="far fa-heart"></i>
                     </button>
                   </div>
@@ -500,7 +314,7 @@
                       <img src="images/icons/cart.svg" class="svg" />
                       <span>إضافة للسلة</span>
                     </button>
-                    <button class="product-btn product-fav">
+                    <button class="product-btn product-fav active">
                       <i class="far fa-heart"></i>
                     </button>
                   </div>
@@ -551,7 +365,7 @@
                       <img src="images/icons/cart.svg" class="svg" />
                       <span>إضافة للسلة</span>
                     </button>
-                    <button class="product-btn product-fav">
+                    <button class="product-btn product-fav active">
                       <i class="far fa-heart"></i>
                     </button>
                   </div>
@@ -602,7 +416,7 @@
                       <img src="images/icons/cart.svg" class="svg" />
                       <span>إضافة للسلة</span>
                     </button>
-                    <button class="product-btn product-fav">
+                    <button class="product-btn product-fav active">
                       <i class="far fa-heart"></i>
                     </button>
                   </div>
@@ -653,7 +467,7 @@
                       <img src="images/icons/cart.svg" class="svg" />
                       <span>إضافة للسلة</span>
                     </button>
-                    <button class="product-btn product-fav">
+                    <button class="product-btn product-fav active">
                       <i class="far fa-heart"></i>
                     </button>
                   </div>
@@ -704,7 +518,7 @@
                       <img src="images/icons/cart.svg" class="svg" />
                       <span>إضافة للسلة</span>
                     </button>
-                    <button class="product-btn product-fav">
+                    <button class="product-btn product-fav active">
                       <i class="far fa-heart"></i>
                     </button>
                   </div>
@@ -755,7 +569,7 @@
                       <img src="images/icons/cart.svg" class="svg" />
                       <span>إضافة للسلة</span>
                     </button>
-                    <button class="product-btn product-fav">
+                    <button class="product-btn product-fav active">
                       <i class="far fa-heart"></i>
                     </button>
                   </div>
@@ -806,7 +620,7 @@
                       <img src="images/icons/cart.svg" class="svg" />
                       <span>إضافة للسلة</span>
                     </button>
-                    <button class="product-btn product-fav">
+                    <button class="product-btn product-fav active">
                       <i class="far fa-heart"></i>
                     </button>
                   </div>
@@ -857,7 +671,7 @@
                       <img src="images/icons/cart.svg" class="svg" />
                       <span>إضافة للسلة</span>
                     </button>
-                    <button class="product-btn product-fav">
+                    <button class="product-btn product-fav active">
                       <i class="far fa-heart"></i>
                     </button>
                   </div>
@@ -908,7 +722,7 @@
                       <img src="images/icons/cart.svg" class="svg" />
                       <span>إضافة للسلة</span>
                     </button>
-                    <button class="product-btn product-fav">
+                    <button class="product-btn product-fav active">
                       <i class="far fa-heart"></i>
                     </button>
                   </div>
@@ -920,125 +734,6 @@
       </div>
     </section>
     <!-- Start Page Content -->
-
-    <!-- Start Testimonials -->
-    <section class="testimonials-section home-section">
-      <div class="container">
-        <div class="testimonials-slider custom-slider">
-          <div class="slider-content">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <div class="item-container">
-                      <div class="testimonial-img">
-                        <img
-                          src="images/testimonials/1.jpg"
-                          class="img-cover"
-                        />
-                      </div>
-                      <h3 class="testimonial-name">عبدالله أحمد</h3>
-                      <div class="testimonial-rate">
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="testimonial-content">
-                        <p>متجر ممتاز</p>
-                        <span>13/5/2024</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <div class="item-container">
-                      <div class="testimonial-img">
-                        <img
-                          src="images/testimonials/3.jpg"
-                          class="img-cover"
-                        />
-                      </div>
-                      <h3 class="testimonial-name">ليلى محمد</h3>
-                      <div class="testimonial-content">
-                        <p>هل المتجر جيد؟</p>
-                        <span>13/5/2024</span>
-                      </div>
-                      <div class="testimonial-answer">
-                        <img src="images/icons/logo.svg" alt="answer" />
-                        <p>نعم</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <div class="item-container">
-                      <div class="testimonial-img">
-                        <img
-                          src="images/testimonials/2.jpg"
-                          class="img-cover"
-                        />
-                      </div>
-                      <h3 class="testimonial-name">عاصم محمد</h3>
-                      <div class="testimonial-rate">
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star active"></i>
-                        <i class="fas fa-star"></i>
-                      </div>
-                      <div class="testimonial-content">
-                        <p>متجر ممتاز</p>
-                        <span>13/5/2024</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <div class="item-container">
-                      <div class="testimonial-img">
-                        <img
-                          src="images/testimonials/3.jpg"
-                          class="img-cover"
-                        />
-                      </div>
-                      <h3 class="testimonial-name">ليلى محمد</h3>
-                      <div class="testimonial-content">
-                        <p>هل المتجر جيد؟</p>
-                        <span>13/5/2024</span>
-                      </div>
-                      <div class="testimonial-answer">
-                        <img src="images/icons/logo.svg" alt="answer" />
-                        <p>نعم</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="slider-pagination"></div>
-        </div>
-        <div class="btns-content">
-          <a
-            type="button"
-            data-bs-toggle="modal"
-            data-bs-target="#addQuestionModal"
-            class="default-btn"
-          >
-            أضف سؤالك
-          </a>
-          <a href="testimonials.html" class="default-btn secondary-btn">
-            عرض الكل
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- End Testimonials -->
 
     <!-- Start Footer -->
     <footer class="footer-section">
@@ -1114,42 +809,6 @@
       </div>
     </footer>
     <!-- End Footer -->
-
-    <!-- Start Modal -->
-    <div
-      class="modal fade"
-      id="addQuestionModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2 class="modal-title">أضف سؤالك</h2>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="fas fa-times-circle"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="modal-from">
-              <div class="form-group">
-                <textarea
-                  class="form-control"
-                  placeholder="ادخل سؤالك"
-                ></textarea>
-              </div>
-              <button class="form-submit">إرسال</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Modal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
