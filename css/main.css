@@ -983,6 +983,7 @@ html[dir=rtl] .select2-container .country_key-list .select2-results__options {
 }
 @media (max-width: 767px) {
   .archive_filter-dropdown {
+    max-width: none;
     width: 100%;
   }
 }
