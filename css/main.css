@@ -4158,8 +4158,11 @@ html[dir=ltr] .order-select {
   position: relative;
   cursor: pointer;
 }
-.user-img-name .user-img img {
+.user-img-name .user-img .img-content {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
+  overflow: hidden;
 }
 .user-img-name .user-img .edit-img {
   position: absolute;
