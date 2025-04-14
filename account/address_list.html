@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <title>Client Store | Profile</title>
+    <title>Client Store | Address</title>
     <link rel="shortcut icon" type="img/png" href="../images/favicon.png" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
@@ -193,164 +193,90 @@
     <!-- Start Page Content -->
     <section class="page-section profile-page">
       <div class="container">
-        <form class="profile-form">
-          <div class="page-content">
-            <h1 class="page-title">الملف الشخصي</h1>
-            <div class="user-img-name">
-              <label class="user-img">
-                <img src="../images/icons/placeholder.svg" class="img-cover" />
-                <div class="edit-img">
-                  <img src="../images/icons/camera.svg" class="svg" />
-                </div>
-                <input
-                  type="file"
-                  accept="image/*"
-                  data-palceholder="../images/icons/placeholder.svg"
-                  onChange="profileImg(this);"
-                />
-              </label>
-            </div>
-            <div class="form-grid">
-              <div class="form-group required">
-                <label class="form-label"> الاسم الأول </label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="ادخل الاسم الأول"
-                  value="عبدالله"
-                />
-              </div>
-              <div class="form-group required">
-                <label class="form-label"> الاسم الأخير </label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="ادخل الاسم الأخير"
-                  value="أحمد"
-                />
-              </div>
-              <div class="form-group">
-                <label class="form-label"> تاريخ الميلاد </label>
-                <input
-                  type="date"
-                  class="form-control"
-                  placeholder="ادخل تاريخ الميلاد"
-                />
-              </div>
-              <div class="form-group">
-                <label class="form-label"> الجنس </label>
-                <select class="form-control">
-                  <option selected hidden>اختر الجنس</option>
-                  <option value="male">ذكر</option>
-                  <option value="female">انثى</option>
-                </select>
-              </div>
-              <div class="form-group required">
-                <label class="form-label"> البريد الإلكتروني </label>
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="ادخل البريد الإلكتروني"
-                  value="info@example.com"
-                />
-              </div>
-              <div class="form-group required">
-                <label class="form-label"> رقم الجوال </label>
-                <div class="tel-content">
-                  <select class="country-key">
-                    <option value="+965" data-flag="../images/flags/+965.svg">
-                      +965
-                    </option>
-                    <option
-                      value="+966"
-                      data-flag="../images/flags/+966.svg"
-                      selected
-                    >
-                      +966
-                    </option>
-                    <option value="+971" data-flag="../images/flags/+971.svg">
-                      +971
-                    </option>
-                    <option value="+973" data-flag="../images/flags/+973.svg">
-                      +973
-                    </option>
-                    <option value="+974" data-flag="../images/flags/+974.svg">
-                      +974
-                    </option>
-                  </select>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    placeholder="ادخل رقم الجوال"
-                    value="12345678"
-                  />
+        <div class="page-content">
+          <h1 class="page-title">العناوين المحفوظة</h1>
+          <div class="address-content">
+            <div class="addresses-list">
+              <div class="address-item">
+                <span class="address-title">
+                  30 شارع طاهر الجزائري,مقابل طوبكابي,مكة المكرمة
+                </span>
+                <div class="address-tools">
+                  <a
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addAddressModal"
+                    class="address-tool address-edit"
+                  >
+                    <img src="../images/icons/edit.svg" class="svg" />
+                  </a>
+                  <a
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteAddressModal"
+                    class="address-tool address-delete"
+                  >
+                    <img src="../images/icons/delete.svg" class="svg" />
+                  </a>
                 </div>
               </div>
-              <div class="form-group">
-                <label class="form-label"> الدولة </label>
-                <select class="form-control">
-                  <option selected hidden>اختر الدولة</option>
-                  <option value="saudi">السعودية</option>
-                  <option value="egypt">مصر</option>
-                  <option value="uae">الامارات</option>
-                </select>
+              <div class="address-item">
+                <span class="address-title">
+                  95 شارع ناصر بن حعوان,بجوار مطعم زهرة التنور ,حفر الباطن
+                </span>
+                <div class="address-tools">
+                  <a
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addAddressModal"
+                    class="address-tool address-edit"
+                  >
+                    <img src="../images/icons/edit.svg" class="svg" />
+                  </a>
+                  <a
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteAddressModal"
+                    class="address-tool address-delete"
+                  >
+                    <img src="../images/icons/delete.svg" class="svg" />
+                  </a>
+                </div>
               </div>
-              <div class="form-group">
-                <label class="form-label"> المدينة </label>
-                <select class="form-control">
-                  <option selected hidden>اختر المدينة</option>
-                  <option value="riyadh">الرياض</option>
-                  <option value="jeddah">جدة</option>
-                  <option value="dammam">دمام</option>
-                  <option value="tabuk">طبوك</option>
-                </select>
+              <div class="address-item">
+                <span class="address-title">
+                  19 شارع ابن نجيب ,أمام مطعم و مشويات الريف الحموي,القطيف
+                </span>
+                <div class="address-tools">
+                  <a
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addAddressModal"
+                    class="address-tool address-edit"
+                  >
+                    <img src="../images/icons/edit.svg" class="svg" />
+                  </a>
+                  <a
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteAddressModal"
+                    class="address-tool address-delete"
+                  >
+                    <img src="../images/icons/delete.svg" class="svg" />
+                  </a>
+                </div>
               </div>
             </div>
+            <button
+              class="add-address"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#addAddressModal"
+            >
+              أضف عنوان
+            </button>
           </div>
-          <div class="page-content">
-            <div class="profile-block">
-              <div class="profile-card">
-                <div class="card-head">
-                  <h3 class="card-title">الرسائل الترويجية</h3>
-                  <div class="card-tool">
-                    <label class="form-switch">
-                      <input type="checkbox" role="switch" />
-                    </label>
-                  </div>
-                </div>
-                <p class="card-desc">
-                  يمكنك التحكم في تعطيل أو تفعيل الرسائل الترويجية من المتجر
-                </p>
-              </div>
-              <div class="profile-card">
-                <div class="card-head">
-                  <h3 class="card-title">تعطيل الحساب</h3>
-                  <div class="card-tool">
-                    <button
-                      class="card-btn"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#deactivateModal"
-                    >
-                      تعطيل الحساب
-                    </button>
-                  </div>
-                </div>
-                <p class="card-desc">
-                  يمكنك حذف حسابك من المتجر ، بما في ذلك طلباتك السابقة ومنتجات
-                  قائمة الأمنيات
-                </p>
-              </div>
-            </div>
-
-            <div class="profile-btns btns-content">
-              <button type="submit" class="default-btn">حفظ</button>
-              <a href="password.html" class="default-btn secondary-btn">
-                تغيير كلمة المرور
-              </a>
-            </div>
-          </div>
-        </form>
+        </div>
       </div>
     </section>
     <!-- Start Page Content -->
@@ -441,14 +367,103 @@
     <!-- Start Modal -->
     <div
       class="modal fade"
-      id="deactivateModal"
+      id="addAddressModal"
       tabindex="-1"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title">تعطيل الحساب</h2>
+            <h2 class="modal-title">إضافة عنوان جديد</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fas fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="modal-from">
+              <div class="form-grid">
+                <div class="form-group">
+                  <select class="form-control">
+                    <option selected hidden>اختر الدولة</option>
+                    <option value="saudi">السعودية</option>
+                    <option value="egypt">مصر</option>
+                    <option value="uae">الامارات</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select class="form-control">
+                    <option selected hidden>اختر المدينة</option>
+                    <option value="riyadh">الرياض</option>
+                    <option value="jeddah">جدة</option>
+                    <option value="dammam">دمام</option>
+                    <option value="tabuk">طبوك</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="الحي" />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="الشارع"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="الرمز البريدي (اختياري)"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="وصف البيت (اختياري)"
+                  />
+                </div>
+                <div class="form-group full-w">
+                  <div class="map-input">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="الموقع على الخريطة"
+                    />
+                    <i class="far fa-location-dot"></i>
+                  </div>
+                  <div class="map_with-input">
+                    <input
+                      id="pac-input"
+                      class="form-control"
+                      type="text"
+                      placeholder="ابحث ب اسم الحي , الشارع"
+                    />
+                    <div id="map"></div>
+                  </div>
+                </div>
+              </div>
+              <button class="form-submit">تأكيد</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="deleteAddressModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">حذف عنوان</h2>
             <button
               type="button"
               class="btn-close"
@@ -461,7 +476,7 @@
           <div class="modal-body">
             <div class="custom-alert">
               <i class="far fa-exclamation-circle"></i>
-              سيتم تعطيل الحساب بشكل نهائي وسيتم حذف جميع بياناتك
+              سيتم حذف العنوان بشكل نهائي
             </div>
             <button data-bs-dismiss="modal" class="form-submit">تأكيد</button>
           </div>
@@ -477,5 +492,71 @@
     <script src="../js/nouislider.min.js"></script>
     <script src="../js/svg.js"></script>
     <script src="../js/main.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initAutocomplete&libraries=places&v=weekly"
+      defer
+    ></script>
+
+    <script>
+      function initAutocomplete() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 24.1407821, lng: 50.3652397 },
+          zoom: 6,
+          zoomControl: false,
+          mapTypeControl: false,
+          scaleControl: false,
+          streetViewControl: false,
+          rotateControl: false,
+          fullscreenControl: false,
+        });
+
+        const input = document.getElementById("pac-input");
+        const searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        map.addListener("bounds_changed", () => {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        let markers = [];
+
+        searchBox.addListener("places_changed", () => {
+          const places = searchBox.getPlaces();
+          if (!places.length) return;
+
+          markers.forEach((marker) => marker.setMap(null));
+          markers = [];
+
+          const bounds = new google.maps.LatLngBounds();
+          places.forEach((place) => {
+            if (!place.geometry?.location) return;
+
+            markers.push(
+              new google.maps.Marker({
+                map,
+                icon: {
+                  url: place.icon,
+                  size: new google.maps.Size(71, 71),
+                  origin: new google.maps.Point(0, 0),
+                  anchor: new google.maps.Point(17, 34),
+                  scaledSize: new google.maps.Size(25, 25),
+                },
+                title: place.name,
+                position: place.geometry.location,
+              })
+            );
+
+            place.geometry.viewport
+              ? bounds.union(place.geometry.viewport)
+              : bounds.extend(place.geometry.location);
+          });
+
+          map.fitBounds(bounds);
+        });
+      }
+
+      window.initAutocomplete = initAutocomplete;
+    </script>
   </body>
 </html>

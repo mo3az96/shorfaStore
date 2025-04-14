@@ -89,7 +89,7 @@
                   <a href="wallet.html">المحفظة</a>
                 </li>
                 <li>
-                  <a href="#!">العناوين المحفوظة</a>
+                  <a href="address_list.html">العناوين المحفوظة</a>
                 </li>
                 <li>
                   <a href="#!" class="logout">تسجيل خروج</a>
@@ -203,7 +203,13 @@
               <h3 class="wallet-title">
                 الرصيد الحالي: <span> 300.00 ر.س</span>
               </h3>
-              <button class="form-submit">شحن رصيد</button>
+              <button
+                class="form-submit"
+                data-bs-toggle="modal"
+                data-bs-target="#addBalanceModal"
+              >
+                شحن رصيد
+              </button>
             </div>
           </div>
         </div>
@@ -293,6 +299,42 @@
       </div>
     </footer>
     <!-- End Footer -->
+
+    <!-- Start Modal -->
+    <div
+      class="modal fade"
+      id="addBalanceModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">شحن رصيد</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fas fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="modal-from">
+              <div class="form-group">
+                <div class="input-currency">
+                  <input type="number" placeholder="ادخل رصيدك" class="form-control" />
+                  <span class="currency">ر.س</span>
+                </div>
+              </div>
+              <button class="form-submit">تأكيد</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

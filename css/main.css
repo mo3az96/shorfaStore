@@ -378,7 +378,7 @@ html[dir=ltr] select {
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 10px;
+  gap: 20px 10px;
 }
 @media (max-width: 1199px) {
   .product_single-form .form-grid {
@@ -395,8 +395,11 @@ html[dir=ltr] select {
     grid-template-columns: 1fr;
   }
 }
-.form-grid .form-group:last-child {
-  margin-bottom: 15px;
+.form-grid .full-w {
+  grid-column: 1/-1;
+}
+.form-grid .form-group {
+  margin: 0;
 }
 @media (max-width: 767px) {
   .form-grid {
@@ -802,6 +805,37 @@ html[dir=rtl] .select2-container .country_key-list .select2-results__options {
   background-color: #fff;
 }
 
+.map-input {
+  position: relative;
+}
+.map-input i {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 9px;
+  inset-inline-end: 15px;
+  color: var(--primaryColor);
+  font-size: 16px;
+}
+
+.input-currency {
+  position: relative;
+}
+.input-currency span {
+  position: absolute;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 9px;
+  inset-inline-end: 15px;
+  color: var(--primaryColor);
+  font-size: 16px;
+}
+
 .modal-backdrop {
   --bs-backdrop-bg: #333951;
   --bs-backdrop-opacity: 0.6;
@@ -826,6 +860,13 @@ html[dir=rtl] .select2-container .country_key-list .select2-results__options {
   .modal-content {
     padding: 30px;
   }
+}
+.modal-content .modal-body::-webkit-scrollbar {
+  background-color: #f1f1f1;
+  width: 0;
+}
+.modal-content .modal-body::-webkit-scrollbar-thumb {
+  background-color: var(--primaryColor);
 }
 .modal-content .btn-close {
   display: flex;
@@ -1451,6 +1492,26 @@ html[dir=ltr] .price-filter .noUi-target .noUi-origin {
   align-items: center;
   justify-content: center;
   color: var(--redColor);
+}
+
+.map_with-input {
+  position: relative;
+  margin-top: 15px;
+}
+.map_with-input .form-control {
+  position: absolute;
+  top: 15px !important;
+  width: calc(100% - 30px);
+  inset-inline: 15px !important;
+  z-index: 5;
+  font-family: cairo;
+}
+
+#map {
+  height: 270px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .main-slider .swiper-slide {
@@ -3743,8 +3804,8 @@ html[dir=ltr] .footer-list a:hover {
 .shipTo .form-group {
   margin-bottom: 15px;
 }
-.shipTo .form-grid .form-group:last-child {
-  margin-bottom: 15px;
+.shipTo .form-grid {
+  gap: 15px 10px;
 }
 
 .checkout-radios {
@@ -4256,4 +4317,93 @@ html[dir=ltr] .order-select {
 .wallet-content .form-submit {
   width: 100%;
   max-width: 316px;
+}
+
+.address-content {
+  position: relative;
+}
+
+.addresses-list {
+  width: 100%;
+  max-width: 630px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.address-item {
+  border-radius: 6px;
+  border: 1px solid #f6f6f6;
+  padding: 9px 15px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 6px;
+}
+.address-item .address-title {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  padding-inline-end: 9px;
+  color: var(--secondaryText);
+  transition: all 0.3s ease-in-out;
+}
+.address-item .address-tools {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  margin-inline-start: auto;
+}
+.address-item .address-tool {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color);
+  border-radius: 6px;
+  fill: var(--color);
+  stroke: var(--color);
+  color: var(--color);
+  transition: all 0.3s ease-in-out;
+}
+.address-item .address-tool:focus {
+  fill: var(--color);
+  stroke: var(--color);
+  color: var(--color);
+}
+.address-item .address-tool:hover {
+  background-color: var(--color);
+  fill: #fff;
+  stroke: #fff;
+  color: #fff;
+}
+.address-item .address-edit {
+  --color: var(--secondaryText);
+}
+.address-item .address-delete {
+  --color: var(--redColor);
+}
+
+.add-address {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  width: 82px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: var(--primaryColor);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.add-address:hover {
+  background-color: var(--secondaryColor);
 }/*# sourceMappingURL=main.css.map */
