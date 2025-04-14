@@ -1612,7 +1612,7 @@ html[dir=ltr] .price-filter .noUi-target .noUi-origin {
 }
 
 .pac-container {
-  z-index: 998;
+  z-index: 99998;
 }
 
 .main-slider .swiper-slide {
