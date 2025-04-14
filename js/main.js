@@ -282,6 +282,15 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+
+  // Input Date
+  $("input[type='date']").change(function () {
+    if ($(this).val() != "") {
+      $(this).parents(".date-content").addClass("active");
+    } else {
+      $(this).parents(".date-content").removeClass("active");
+    }
+  });
 });
 // User Image
 function profileImg(input) {

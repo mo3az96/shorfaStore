@@ -836,6 +836,54 @@ html[dir=rtl] .select2-container .country_key-list .select2-results__options {
   font-size: 16px;
 }
 
+.date-content {
+  position: relative;
+}
+.date-content i {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 9px;
+  inset-inline-end: 15px;
+  color: var(--secondaryText);
+  font-size: 16px;
+  z-index: 1;
+  pointer-events: none;
+}
+.date-content:after {
+  content: attr(data-placeholder);
+  position: absolute;
+  inset: 1px;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #a0a0a0;
+  font-weight: 300;
+  pointer-events: none;
+}
+.date-content.active:after {
+  display: none;
+}
+.date-content input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  display: block;
+  z-index: 2;
+}
+
 .modal-backdrop {
   --bs-backdrop-bg: #333951;
   --bs-backdrop-opacity: 0.6;
@@ -1561,6 +1609,10 @@ html[dir=ltr] .price-filter .noUi-target .noUi-origin {
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
+}
+
+.pac-container {
+  z-index: 998;
 }
 
 .main-slider .swiper-slide {
