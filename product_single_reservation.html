@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <title>Client Store | Single</title>
+    <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/nouislider.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header class="header-section">
+      <div class="container">
+        <div class="header">
+          <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="logo" class="img-contain" />
+          </a>
+          <form class="search-form">
+            <div class="search-content">
+              <select class="search-select select2-trigger">
+                <option value="value1">المنتجات</option>
+                <option value="value2">المجموعات</option>
+                <option value="value3">المنتجات الرقمية</option>
+                <option value="value4">الخدمات</option>
+                <option value="value5">الحجوزات</option>
+              </select>
+              <input
+                type="search"
+                class="search-input"
+                placeholder="ابحث عن ما تريد.."
+              />
+              <button class="search-btn">
+                <img src="images/icons/search.svg" alt="search" class="svg" />
+              </button>
+            </div>
+          </form>
+          <div class="header-tools">
+            <a href="#!" class="header-icon menu-btn">
+              <i class="far fa-bars"></i>
+            </a>
+            <a href="#!" class="header-icon wishlist-icon">
+              <i class="far fa-heart"></i>
+              <small class="count">0</small>
+            </a>
+            <a href="#!" class="header-icon notification-icon">
+              <img
+                src="images/icons/notification.svg"
+                alt="notification"
+                class="svg"
+              />
+              <small class="count">0</small>
+            </a>
+            <div class="dropdown-content user_dropdown-content">
+              <a
+                role="button"
+                type="button"
+                class="header_icon-content header_user-content dropdown-btn"
+              >
+                <span class="header-icon user-icon">
+                  <img src="images/icons/user.svg" alt="user" class="svg" />
+                </span>
+                <div class="header_icon-text">
+                  <span>أهلاً بك</span>
+                  <p>عبدالله أحمد</p>
+                </div>
+              </a>
+              <ul class="dropdown-list user_dropdown-list">
+                <li>
+                  <a href="account/profile.html">الملف الشخصي</a>
+                </li>
+                <li>
+                  <a href="#!">الطلبات</a>
+                </li>
+                <li>
+                  <a href="account/wallet.html">المحفظة</a>
+                </li>
+                <li>
+                  <a href="account/address_list.html">العناوين المحفوظة</a>
+                </li>
+                <li>
+                  <a href="#!" class="logout">تسجيل خروج</a>
+                </li>
+              </ul>
+            </div>
+            <a href="#!" class="header_icon-content header_cart-content">
+              <span class="header-icon cart-icon">
+                <img src="images/icons/cart.svg" alt="cart" class="svg" />
+                <small class="count">0</small>
+              </span>
+              <div class="header_icon-text">
+                <span>سلة المشتريات</span>
+                <p>300.00 ر.س</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <nav class="header-nav">
+        <div class="container">
+          <button class="menu-close">
+            <i class="far fa-times"></i>
+          </button>
+          <div class="nav-content">
+            <ul class="nav-list">
+              <li>
+                <a href="#!">أحدث المنتجات</a>
+              </li>
+              <li>
+                <a href="#!">المجموعات</a>
+              </li>
+              <li>
+                <a href="#!">منتجات رقمية</a>
+              </li>
+              <li>
+                <a href="#!">خدمات حسب الطلب</a>
+              </li>
+              <li>
+                <a href="#!">حجوزات</a>
+              </li>
+            </ul>
+            <div class="nav-tools">
+              <div class="dropdown-content lang-content">
+                <button class="dropdown-btn lang-btn">اللغة العربية</button>
+                <ul class="dropdown-list lang-list">
+                  <li>
+                    <a href="#!" class="active">اللغة العربية</a>
+                  </li>
+                  <li>
+                    <a href="#!">English</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown-content currency-content">
+                <button class="dropdown-btn currency-btn">
+                  <img src="images/currency/sar.svg" alt="sar" />
+                  ريال سعودي
+                </button>
+                <ul class="dropdown-list currency-list">
+                  <li>
+                    <button class="active">
+                      <img src="images/currency/sar.svg" alt="sar" />
+                      ريال سعودي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/aed.svg" alt="sar" />
+                      درهم إماراتي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/bhd.svg" alt="sar" />
+                      دينار بحريني
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/kwd.svg" alt="sar" />
+                      دينار كويتي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/qar.svg" alt="sar" />
+                      ريال قطري
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Page Content -->
+    <section class="page-section product_single-page">
+      <div class="container">
+        <div class="page-content">
+          <h1 class="product_single-title">تفاصيل المنتج</h1>
+          <div class="product_single-gallery">
+            <div class="product_gallery-slider custom-slider">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="product_gallery-img">
+                      <img
+                        src="images/product_single/1.jpg"
+                        class="img-cover"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product_gallery-img">
+                      <img
+                        src="images/product_single/2.jpg"
+                        class="img-cover"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product_gallery-img">
+                      <img
+                        src="images/product_single/3.jpg"
+                        class="img-cover"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product_gallery-img">
+                      <img
+                        src="images/product_single/4.jpg"
+                        class="img-cover"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product_gallery-img">
+                      <img
+                        src="images/product_single/5.jpg"
+                        class="img-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-pagination"></div>
+            </div>
+          </div>
+          <div class="product_single-content">
+            <div class="product_single-info">
+              <div class="product_info-head">
+                <h2 class="product_info-title">تنسيق قاعات</h2>
+                <span class="product_info-label">اشتراك أسبوعي</span>
+                <span class="product_info-discount">%10</span>
+              </div>
+              <p class="product_info-desc">
+                قم بإنشاء حفلتك واحتفل بمناسبتك في أفضل الأماكن بالمملكة العربية
+                السعودية ,قم بالحجز الآن
+              </p>
+              <div class="product_info-line">
+                <div class="product_info-price">
+                  <span>150.00 ر.س</span>
+                  <del>180.00 ر.س</del>
+                </div>
+              </div>
+              <ul class="product_info-extras">
+                <li><span>تاريخ إنتهاء الخصم:</span>15/9/2024</li>
+                <li><span>عدد مرات الشراء:</span>20</li>
+                <li><span>SKU:</span>12</li>
+              </ul>
+              <div class="product_info-tools product-tools">
+                <div class="product-btns">
+                  <button
+                    class="product-btn product-cart product-reservation"
+                    data-bs-toggle="modal"
+                    data-bs-target="#todayOffers"
+                  >
+                    <img src="images/icons/reservation.svg" class="svg" />
+                    <span>احجز الآن</span>
+                  </button>
+                  <button class="product-btn product-fav">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <button class="product-btn product-share">
+                    <img src="images/icons/share.svg" class="svg" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="product_single-form">
+              <h2 class="product_form-title">
+                ايش تنتظر؟
+                <span>احصل على المنتج مباشرة الآن</span>
+              </h2>
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="الاسم" />
+                </div>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="رقم الجوال"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <div class="tel-content">
+                      <select class="country-key">
+                        <option value="+965" data-flag="images/flags/+965.svg">
+                          +965
+                        </option>
+                        <option
+                          value="+966"
+                          data-flag="images/flags/+966.svg"
+                          selected
+                        >
+                          +966
+                        </option>
+                        <option value="+971" data-flag="images/flags/+971.svg">
+                          +971
+                        </option>
+                        <option value="+973" data-flag="images/flags/+973.svg">
+                          +973
+                        </option>
+                        <option value="+974" data-flag="images/flags/+974.svg">
+                          +974
+                        </option>
+                      </select>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        placeholder="ادخل رقم الجوال"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-tools">
+                  <div class="custom-checkbox">
+                    <label>
+                      <input type="checkbox" value="" />
+                      <span class="checkmark"></span>
+                      <span class="checktext">
+                        أقر بان اعاود الشراء مرة اخرى من المتجر
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <button class="form-submit">اطلب المنتج</button>
+              </form>
+            </div>
+          </div>
+          <div class="product_single-offers">
+            <h3 class="offers-title">عروض اليوم</h3>
+            <div class="product-offers">
+              <div class="offer-item">
+                <span class="item-icon">
+                  <img src="images/icons/offer.svg" class="svg" />
+                </span>
+                <div class="item-info">
+                  <h4 class="item-title">اشتري 1 بخصم</h4>
+                  <span class="item-value"> %10 </span>
+                </div>
+              </div>
+              <div class="offer-item">
+                <span class="item-icon">
+                  <img src="images/icons/offer.svg" class="svg" />
+                </span>
+                <div class="item-info">
+                  <h4 class="item-title">اشتري 2 بخصم</h4>
+                  <span class="item-value"> %20 </span>
+                </div>
+              </div>
+              <div class="offer-item">
+                <span class="item-icon">
+                  <img src="images/icons/offer.svg" class="svg" />
+                </span>
+                <div class="item-info">
+                  <h4 class="item-title">اشتري 3 بخصم</h4>
+                  <span class="item-value"> %30 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start Page Content -->
+
+    <!-- Start Testimonials -->
+    <section class="testimonials-section home-section">
+      <div class="container">
+        <div class="testimonials-slider custom-slider">
+          <div class="slider-content">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/1.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">عبدالله أحمد</h3>
+                      <div class="testimonial-rate">
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="testimonial-content">
+                        <p>متجر ممتاز</p>
+                        <span>13/5/2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/3.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">ليلى محمد</h3>
+                      <div class="testimonial-content">
+                        <p>هل المتجر جيد؟</p>
+                        <span>13/5/2024</span>
+                      </div>
+                      <div class="testimonial-answer">
+                        <img src="images/icons/logo.svg" alt="answer" />
+                        <p>نعم</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/2.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">عاصم محمد</h3>
+                      <div class="testimonial-rate">
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="testimonial-content">
+                        <p>متجر ممتاز</p>
+                        <span>13/5/2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/3.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">ليلى محمد</h3>
+                      <div class="testimonial-content">
+                        <p>هل المتجر جيد؟</p>
+                        <span>13/5/2024</span>
+                      </div>
+                      <div class="testimonial-answer">
+                        <img src="images/icons/logo.svg" alt="answer" />
+                        <p>نعم</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-pagination"></div>
+        </div>
+        <div class="btns-content">
+          <a
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#addQuestionModal"
+            class="default-btn"
+          >
+            أضف سؤالك
+          </a>
+          <a href="testimonials.html" class="default-btn secondary-btn">
+            عرض الكل
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- End Testimonials -->
+
+    <!-- Start Products -->
+    <section class="products-section related-section">
+      <div class="container">
+        <div class="products-content bg-content">
+          <div class="section-head">
+            <h2 class="section-title">منتجات مشابهة</h2>
+          </div>
+          <div class="products-slider custom-slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <a href="product_single.html" class="product-img">
+                      <img src="images/products/3.jpg" class="img-cover" />
+                    </a>
+                    <div class="product-text">
+                      <div class="product-head">
+                        <h3 class="product-title">
+                          <a href="product_single.html">قسيمة شرائية</a>
+                        </h3>
+                        <span class="product-discout"> %10 </span>
+                        <span class="product-price"> 150.00 ر.س </span>
+                      </div>
+                      <p class="product-desc">
+                        اشتري القسيمة الشرائية الآن بقيمة 120 ريال سعودي واحصل
+                        على مشتريات بقيمة 150 ريال سعودي
+                      </p>
+                      <div class="product-tools">
+                        <div class="product-qty">
+                          <button
+                            class="qty-btn"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                          >
+                            <i class="far fa-plus"></i>
+                          </button>
+                          <input
+                            type="number"
+                            class="qty-input"
+                            value="1"
+                            min="1"
+                            max="10"
+                            readonly
+                          />
+                          <button
+                            class="qty-btn"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                          >
+                            <i class="far fa-minus"></i>
+                          </button>
+                        </div>
+                        <div class="product-btns">
+                          <button class="product-btn product-cart">
+                            <img src="images/icons/cart.svg" class="svg" />
+                            <span>إضافة للسلة</span>
+                          </button>
+                          <button class="product-btn product-fav">
+                            <i class="far fa-heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <a href="product_single.html" class="product-img">
+                      <img src="images/products/3.jpg" class="img-cover" />
+                    </a>
+                    <div class="product-text">
+                      <div class="product-head">
+                        <h3 class="product-title">
+                          <a href="product_single.html">قسيمة شرائية</a>
+                        </h3>
+                        <span class="product-discout"> %10 </span>
+                        <span class="product-price"> 150.00 ر.س </span>
+                      </div>
+                      <p class="product-desc">
+                        اشتري القسيمة الشرائية الآن بقيمة 120 ريال سعودي واحصل
+                        على مشتريات بقيمة 150 ريال سعودي
+                      </p>
+                      <div class="product-tools">
+                        <div class="product-qty">
+                          <button
+                            class="qty-btn"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                          >
+                            <i class="far fa-plus"></i>
+                          </button>
+                          <input
+                            type="number"
+                            class="qty-input"
+                            value="1"
+                            min="1"
+                            max="10"
+                            readonly
+                          />
+                          <button
+                            class="qty-btn"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                          >
+                            <i class="far fa-minus"></i>
+                          </button>
+                        </div>
+                        <div class="product-btns">
+                          <button class="product-btn product-cart">
+                            <img src="images/icons/cart.svg" class="svg" />
+                            <span>إضافة للسلة</span>
+                          </button>
+                          <button class="product-btn product-fav">
+                            <i class="far fa-heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <a href="product_single.html" class="product-img">
+                      <img src="images/products/3.jpg" class="img-cover" />
+                    </a>
+                    <div class="product-text">
+                      <div class="product-head">
+                        <h3 class="product-title">
+                          <a href="product_single.html">قسيمة شرائية</a>
+                        </h3>
+                        <span class="product-discout"> %10 </span>
+                        <span class="product-price"> 150.00 ر.س </span>
+                      </div>
+                      <p class="product-desc">
+                        اشتري القسيمة الشرائية الآن بقيمة 120 ريال سعودي واحصل
+                        على مشتريات بقيمة 150 ريال سعودي
+                      </p>
+                      <div class="product-tools">
+                        <div class="product-qty">
+                          <button
+                            class="qty-btn"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                          >
+                            <i class="far fa-plus"></i>
+                          </button>
+                          <input
+                            type="number"
+                            class="qty-input"
+                            value="1"
+                            min="1"
+                            max="10"
+                            readonly
+                          />
+                          <button
+                            class="qty-btn"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                          >
+                            <i class="far fa-minus"></i>
+                          </button>
+                        </div>
+                        <div class="product-btns">
+                          <button class="product-btn product-cart">
+                            <img src="images/icons/cart.svg" class="svg" />
+                            <span>إضافة للسلة</span>
+                          </button>
+                          <button class="product-btn product-fav">
+                            <i class="far fa-heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <a href="product_single.html" class="product-img">
+                      <img src="images/products/3.jpg" class="img-cover" />
+                    </a>
+                    <div class="product-text">
+                      <div class="product-head">
+                        <h3 class="product-title">
+                          <a href="product_single.html">قسيمة شرائية</a>
+                        </h3>
+                        <span class="product-discout"> %10 </span>
+                        <span class="product-price"> 150.00 ر.س </span>
+                      </div>
+                      <p class="product-desc">
+                        اشتري القسيمة الشرائية الآن بقيمة 120 ريال سعودي واحصل
+                        على مشتريات بقيمة 150 ريال سعودي
+                      </p>
+                      <div class="product-tools">
+                        <div class="product-qty">
+                          <button
+                            class="qty-btn"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                          >
+                            <i class="far fa-plus"></i>
+                          </button>
+                          <input
+                            type="number"
+                            class="qty-input"
+                            value="1"
+                            min="1"
+                            max="10"
+                            readonly
+                          />
+                          <button
+                            class="qty-btn"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                          >
+                            <i class="far fa-minus"></i>
+                          </button>
+                        </div>
+                        <div class="product-btns">
+                          <button class="product-btn product-cart">
+                            <img src="images/icons/cart.svg" class="svg" />
+                            <span>إضافة للسلة</span>
+                          </button>
+                          <button class="product-btn product-fav">
+                            <i class="far fa-heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-item">
+                    <a href="product_single.html" class="product-img">
+                      <img src="images/products/3.jpg" class="img-cover" />
+                    </a>
+                    <div class="product-text">
+                      <div class="product-head">
+                        <h3 class="product-title">
+                          <a href="product_single.html">قسيمة شرائية</a>
+                        </h3>
+                        <span class="product-discout"> %10 </span>
+                        <span class="product-price"> 150.00 ر.س </span>
+                      </div>
+                      <p class="product-desc">
+                        اشتري القسيمة الشرائية الآن بقيمة 120 ريال سعودي واحصل
+                        على مشتريات بقيمة 150 ريال سعودي
+                      </p>
+                      <div class="product-tools">
+                        <div class="product-qty">
+                          <button
+                            class="qty-btn"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                          >
+                            <i class="far fa-plus"></i>
+                          </button>
+                          <input
+                            type="number"
+                            class="qty-input"
+                            value="1"
+                            min="1"
+                            max="10"
+                            readonly
+                          />
+                          <button
+                            class="qty-btn"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                          >
+                            <i class="far fa-minus"></i>
+                          </button>
+                        </div>
+                        <div class="product-btns">
+                          <button class="product-btn product-cart">
+                            <img src="images/icons/cart.svg" class="svg" />
+                            <span>إضافة للسلة</span>
+                          </button>
+                          <button class="product-btn product-fav">
+                            <i class="far fa-heart"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Products -->
+
+    <!-- Start Footer -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer">
+          <div class="footer-menu">
+            <h3 class="footer-title">روابط سريعة</h3>
+            <ul class="footer-list">
+              <li>
+                <a href="#!">المدونة</a>
+              </li>
+              <li>
+                <a href="#!">سياسة الاستبدال والاسترجاع</a>
+              </li>
+              <li>
+                <a href="#!">سياسة الاستخدام والخصوصية</a>
+              </li>
+              <li>
+                <a href="#!">الشروط والأحكام</a>
+              </li>
+              <li>
+                <a href="#!">نظام الولاء</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img src="images/footer_logo.svg" alt="logo" />
+            </div>
+            <p class="footer-desc">
+              واحد من أهم روّاد المواقع الإلكترونية المتخصصة في مجال لبيع
+              المنتجات والخدمات خلال أقصر وقت ممكن وبأقل جهد يُذكر و يوجد أقسام
+              رئيسية وفرعية لعرض وتصفّح مختلف أنواع السلع والخدمات بالموقع
+            </p>
+          </div>
+          <div class="footer-contacts">
+            <h3 class="footer-title">روابط التواصل</h3>
+            <ul class="contacts-list">
+              <li>
+                <a href="tel:+966 12345678">
+                  <i class="icon">
+                    <img src="images/icons/phone.svg" class="svg" alt="phone" />
+                  </i>
+                  <span class="en"> +966 12345678 </span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@example.com">
+                  <i class="icon">
+                    <img src="images/icons/email.svg" class="svg" alt="email" />
+                  </i>
+                  <span class="en"> info@example.com </span>
+                </a>
+              </li>
+            </ul>
+            <div class="soials">
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-snapchat"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="copyrights">جميع الحقوق محفوظة لمتجر الرياض 2024</p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Modal -->
+    <div
+      class="modal fade"
+      id="addQuestionModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">أضف سؤالك</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fas fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="modal-from">
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  placeholder="ادخل سؤالك"
+                ></textarea>
+              </div>
+              <button class="form-submit">إرسال</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="todayOffers" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">عرض اليوم</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fas fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="offers-from">
+              <div class="offers-radios">
+                <label class="offer-radio">
+                  <input type="radio" name="offer" />
+                  <span class="checkmark"></span>
+                  <div class="offer-item">
+                    <span class="item-icon">
+                      <img src="images/icons/offer.svg" class="svg" />
+                    </span>
+                    <div class="item-info">
+                      <h4 class="item-title">اشتري 2 بخصم</h4>
+                      <span class="item-value"> %20 </span>
+                    </div>
+                  </div>
+                </label>
+                <label class="offer-radio">
+                  <input type="radio" name="offer" />
+                  <span class="checkmark"></span>
+                  <div class="offer-item">
+                    <span class="item-icon">
+                      <img src="images/icons/offer.svg" class="svg" />
+                    </span>
+                    <div class="item-info">
+                      <h4 class="item-title">اشتري 2 بخصم</h4>
+                      <span class="item-value"> %20 </span>
+                    </div>
+                  </div>
+                </label>
+                <label class="offer-radio">
+                  <input type="radio" name="offer" />
+                  <span class="checkmark"></span>
+                  <div class="offer-item">
+                    <span class="item-icon">
+                      <img src="images/icons/offer.svg" class="svg" />
+                    </span>
+                    <div class="item-info">
+                      <h4 class="item-title">اشتري 2 بخصم</h4>
+                      <span class="item-value"> %20 </span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <a
+                href="checkout_reservation.html"
+                class="form-submit secondary-btn"
+              >
+                <img src="images/icons/reservation.svg" class="svg" />
+                احجز الآن
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="addedToCart" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="success-content">
+              <i class="fas fa-check-circle fa-sharp"></i>
+              <h2 class="modal-title">تم إضافة المنتج للسلة بنجاح</h2>
+              <div class="btns-content">
+                <a
+                  href="products_archive.html"
+                  class="form-submit secondary-btn"
+                >
+                  متابعة التسوق
+                </a>
+                <a href="cart.html" class="form-submit"> الذهاب للسلة </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Modal -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/svg.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

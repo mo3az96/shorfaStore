@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <title>Client Store | Archive</title>
+    <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/nouislider.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header class="header-section">
+      <div class="container">
+        <div class="header">
+          <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="logo" class="img-contain" />
+          </a>
+          <form class="search-form">
+            <div class="search-content">
+              <select class="search-select select2-trigger">
+                <option value="value1">المنتجات</option>
+                <option value="value2">المجموعات</option>
+                <option value="value3">المنتجات الرقمية</option>
+                <option value="value4">الخدمات</option>
+                <option value="value5">الحجوزات</option>
+              </select>
+              <input
+                type="search"
+                class="search-input"
+                placeholder="ابحث عن ما تريد.."
+              />
+              <button class="search-btn">
+                <img src="images/icons/search.svg" alt="search" class="svg" />
+              </button>
+            </div>
+          </form>
+          <div class="header-tools">
+            <a href="#!" class="header-icon menu-btn">
+              <i class="far fa-bars"></i>
+            </a>
+            <a href="#!" class="header-icon wishlist-icon">
+              <i class="far fa-heart"></i>
+              <small class="count">0</small>
+            </a>
+            <a href="#!" class="header-icon notification-icon">
+              <img
+                src="images/icons/notification.svg"
+                alt="notification"
+                class="svg"
+              />
+              <small class="count">0</small>
+            </a>
+            <div class="dropdown-content user_dropdown-content">
+              <a
+                role="button"
+                type="button"
+                class="header_icon-content header_user-content dropdown-btn"
+              >
+                <span class="header-icon user-icon">
+                  <img src="images/icons/user.svg" alt="user" class="svg" />
+                </span>
+                <div class="header_icon-text">
+                  <span>أهلاً بك</span>
+                  <p>عبدالله أحمد</p>
+                </div>
+              </a>
+              <ul class="dropdown-list user_dropdown-list">
+                <li>
+                  <a href="account/profile.html">الملف الشخصي</a>
+                </li>
+                <li>
+                  <a href="#!">الطلبات</a>
+                </li>
+                <li>
+                  <a href="account/wallet.html">المحفظة</a>
+                </li>
+                <li>
+                  <a href="account/address_list.html">العناوين المحفوظة</a>
+                </li>
+                <li>
+                  <a href="#!" class="logout">تسجيل خروج</a>
+                </li>
+              </ul>
+            </div>
+            <a href="#!" class="header_icon-content header_cart-content">
+              <span class="header-icon cart-icon">
+                <img src="images/icons/cart.svg" alt="cart" class="svg" />
+                <small class="count">0</small>
+              </span>
+              <div class="header_icon-text">
+                <span>سلة المشتريات</span>
+                <p>300.00 ر.س</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <nav class="header-nav">
+        <div class="container">
+          <button class="menu-close">
+            <i class="far fa-times"></i>
+          </button>
+          <div class="nav-content">
+            <ul class="nav-list">
+              <li>
+                <a href="#!">أحدث المنتجات</a>
+              </li>
+              <li>
+                <a href="#!">المجموعات</a>
+              </li>
+              <li>
+                <a href="#!">منتجات رقمية</a>
+              </li>
+              <li>
+                <a href="#!">خدمات حسب الطلب</a>
+              </li>
+              <li>
+                <a href="#!">حجوزات</a>
+              </li>
+            </ul>
+            <div class="nav-tools">
+              <div class="dropdown-content lang-content">
+                <button class="dropdown-btn lang-btn">اللغة العربية</button>
+                <ul class="dropdown-list lang-list">
+                  <li>
+                    <a href="#!" class="active">اللغة العربية</a>
+                  </li>
+                  <li>
+                    <a href="#!">English</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown-content currency-content">
+                <button class="dropdown-btn currency-btn">
+                  <img src="images/currency/sar.svg" alt="sar" />
+                  ريال سعودي
+                </button>
+                <ul class="dropdown-list currency-list">
+                  <li>
+                    <button class="active">
+                      <img src="images/currency/sar.svg" alt="sar" />
+                      ريال سعودي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/aed.svg" alt="sar" />
+                      درهم إماراتي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/bhd.svg" alt="sar" />
+                      دينار بحريني
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/kwd.svg" alt="sar" />
+                      دينار كويتي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/qar.svg" alt="sar" />
+                      ريال قطري
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Page Content -->
+    <section class="page-section product_archive-page">
+      <div class="container">
+        <div class="page-content">
+          <h1 class="page-title">الجوالات<span> (عدد مرات الشراء:37)</span></h1>
+          <div class="archive-form">
+            <form class="filter-form">
+              <label class="archive-label"> فلتر حسب </label>
+              <div class="archive_filter-dropdown">
+                <span class="archive_dropdown-btn">التصنيفات</span>
+                <div class="archive_dropdown-list">
+                  <div class="filter-box" id="filterBox">
+                    <div class="filter-category">
+                      <div class="filter-item">
+                        <input type="checkbox" id="all" />
+                        <label for="all">
+                          <span class="checkmark"></span>
+                          الكل
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="filter-category">
+                      <div class="filter-item" data-id="mobiles">
+                        <input type="checkbox" id="mobiles" />
+                        <label for="mobiles">
+                          <span class="checkmark"></span>
+                          جوالات
+                        </label>
+                      </div>
+
+                      <div
+                        class="filter-item level-1"
+                        data-id="iphone"
+                        data-parent="mobiles"
+                      >
+                        <input type="checkbox" id="iphone" />
+                        <label for="iphone">
+                          <span class="checkmark"></span>
+                          آيفون
+                        </label>
+                      </div>
+
+                      <div
+                        class="filter-item level-1"
+                        data-id="android"
+                        data-parent="mobiles"
+                      >
+                        <input type="checkbox" id="android" />
+                        <label for="android">
+                          <span class="checkmark"></span>
+                          أندرويد
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="filter-category">
+                      <div class="filter-item" data-id="electronics">
+                        <input type="checkbox" id="electronics" />
+                        <label for="electronics">
+                          <span class="checkmark"></span>
+                          أجهزة كهربائية
+                        </label>
+                      </div>
+
+                      <div
+                        class="filter-item level-1"
+                        data-id="fridge"
+                        data-parent="electronics"
+                      >
+                        <input type="checkbox" id="fridge" />
+                        <label for="fridge">
+                          <span class="checkmark"></span>
+                          ثلاجات
+                        </label>
+                      </div>
+
+                      <div
+                        class="filter-item level-2"
+                        data-id="small-fridge"
+                        data-parent="fridge"
+                      >
+                        <input type="checkbox" id="small-fridge" />
+                        <label for="small-fridge">
+                          <span class="checkmark"></span>
+                          صغيرة
+                        </label>
+                      </div>
+
+                      <div
+                        class="filter-item level-2"
+                        data-id="large-fridge"
+                        data-parent="fridge"
+                      >
+                        <input type="checkbox" id="large-fridge" />
+                        <label for="large-fridge">
+                          <span class="checkmark"></span>
+                          كبيرة
+                        </label>
+                      </div>
+
+                      <div
+                        class="filter-item level-1"
+                        data-id="washer"
+                        data-parent="electronics"
+                      >
+                        <input type="checkbox" id="washer" />
+                        <label for="washer">
+                          <span class="checkmark"></span>
+                          غسالات
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="filter-category">
+                      <div class="filter-item" data-id="headphones">
+                        <input type="checkbox" id="headphones" />
+                        <label for="headphones">
+                          <span class="checkmark"></span>
+                          سماعات
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="archive_filter-dropdown">
+                <span class="archive_dropdown-btn">تقييم المنتج</span>
+                <div class="archive_dropdown-list">
+                  <div class="rate-box">
+                    <div class="ratestars">
+                      <input id="rate5" name="rating" type="radio" value="5" />
+                      <label class="revstar" for="rate5" title="5">
+                        <i class="fas fa-star"></i>
+                      </label>
+                      <input id="rate4" name="rating" type="radio" value="4" />
+                      <label class="revstar" for="rate4" title="4">
+                        <i class="fas fa-star"></i>
+                      </label>
+                      <input id="rate3" name="rating" type="radio" value="3" />
+                      <label class="revstar" for="rate3" title="3">
+                        <i class="fas fa-star"></i>
+                      </label>
+                      <input id="rate2" name="rating" type="radio" value="2" />
+                      <label class="revstar" for="rate2" title="2">
+                        <i class="fas fa-star"></i>
+                      </label>
+                      <input id="rate1" name="rating" type="radio" value="1" />
+                      <label class="revstar" for="rate1" title="1">
+                        <i class="fas fa-star"></i>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="archive_filter-dropdown">
+                <span class="archive_dropdown-btn">سعر المنتج</span>
+                <div class="archive_dropdown-list">
+                  <div class="price-box">
+                    <div class="price-filter">
+                      <div
+                        id="price-slider"
+                        class="price-slider"
+                        data-min-price="500"
+                        data-max-price="1000"
+                      ></div>
+                      <div class="values-inputs">
+                        <input id="min-price" type="number" class="min-price" />
+                        <input id="max-price" type="number" class="max-price" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="archive_form-btns">
+                <button type="submit" class="filter-btn filter-submit">
+                  عرض النتائج
+                </button>
+                <button type="reset" class="filter-btn filter-reset">
+                  إعادة تعيين
+                </button>
+              </div>
+            </form>
+            <form class="filter-form">
+              <label class="archive-label"> ترتيب حسب </label>
+              <div class="archive_filter-radios">
+                <div class="order-item">
+                  <input type="radio" name="oder" id="suggestions" />
+                  <label for="suggestions">
+                    <span class="checkmark"></span>
+                    مقترحاتنا
+                  </label>
+                </div>
+                <div class="order-item">
+                  <input type="radio" name="oder" id="best" />
+                  <label for="best">
+                    <span class="checkmark"></span>
+                    الأكثر مبيعاً
+                  </label>
+                </div>
+                <div class="order-item">
+                  <input type="radio" name="oder" id="least" />
+                  <label for="least">
+                    <span class="checkmark"></span>
+                    الأقل مبيعاً
+                  </label>
+                </div>
+              </div>
+
+              <div class="archive_form-btns">
+                <button type="submit" class="filter-btn filter-submit">
+                  عرض النتائج
+                </button>
+                <button type="reset" class="filter-btn filter-reset">
+                  إعادة تعيين
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="archive-grid">
+            <div class="product-item">
+              <a href="product_single_reservation.html" class="product-img">
+                <img src="images/products/5.jpg" class="img-cover" />
+              </a>
+              <div class="product-text">
+                <div class="product-head">
+                  <h3 class="product-title">
+                    <a href="product_single_reservation.html">جوال ايفون 14</a>
+                  </h3>
+                  <span class="product-discout"> %10 </span>
+                  <span class="product-price"> 150.00 ر.س </span>
+                </div>
+                <p class="product-desc">
+                  شاشة سوبر ريتينا اكس دي ار مقاس 6.1 بوصة، نظام كاميرا متطور
+                  للحصول على صور أفضل في أي إضاءة
+                </p>
+                <div class="product-tools">
+                  <div class="product-btns">
+                    <button class="product-btn product-fav">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="product_single_reservation.html" class="product-img">
+                <img src="images/products/5.jpg" class="img-cover" />
+              </a>
+              <div class="product-text">
+                <div class="product-head">
+                  <h3 class="product-title">
+                    <a href="product_single_reservation.html">جوال ايفون 14</a>
+                  </h3>
+                  <span class="product-discout"> %10 </span>
+                  <span class="product-price"> 150.00 ر.س </span>
+                </div>
+                <p class="product-desc">
+                  شاشة سوبر ريتينا اكس دي ار مقاس 6.1 بوصة، نظام كاميرا متطور
+                  للحصول على صور أفضل في أي إضاءة
+                </p>
+                <div class="product-tools">
+                  <div class="product-btns">
+                    <button class="product-btn product-fav">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="product_single_reservation.html" class="product-img">
+                <img src="images/products/5.jpg" class="img-cover" />
+              </a>
+              <div class="product-text">
+                <div class="product-head">
+                  <h3 class="product-title">
+                    <a href="product_single_reservation.html">جوال ايفون 14</a>
+                  </h3>
+                  <span class="product-discout"> %10 </span>
+                  <span class="product-price"> 150.00 ر.س </span>
+                </div>
+                <p class="product-desc">
+                  شاشة سوبر ريتينا اكس دي ار مقاس 6.1 بوصة، نظام كاميرا متطور
+                  للحصول على صور أفضل في أي إضاءة
+                </p>
+                <div class="product-tools">
+                  <div class="product-btns">
+                    <button class="product-btn product-fav">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="product_single_reservation.html" class="product-img">
+                <img src="images/products/5.jpg" class="img-cover" />
+              </a>
+              <div class="product-text">
+                <div class="product-head">
+                  <h3 class="product-title">
+                    <a href="product_single_reservation.html">جوال ايفون 14</a>
+                  </h3>
+                  <span class="product-discout"> %10 </span>
+                  <span class="product-price"> 150.00 ر.س </span>
+                </div>
+                <p class="product-desc">
+                  شاشة سوبر ريتينا اكس دي ار مقاس 6.1 بوصة، نظام كاميرا متطور
+                  للحصول على صور أفضل في أي إضاءة
+                </p>
+                <div class="product-tools">
+                  <div class="product-btns">
+                    <button class="product-btn product-fav">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="product_single_reservation.html" class="product-img">
+                <img src="images/products/5.jpg" class="img-cover" />
+              </a>
+              <div class="product-text">
+                <div class="product-head">
+                  <h3 class="product-title">
+                    <a href="product_single_reservation.html">جوال ايفون 14</a>
+                  </h3>
+                  <span class="product-discout"> %10 </span>
+                  <span class="product-price"> 150.00 ر.س </span>
+                </div>
+                <p class="product-desc">
+                  شاشة سوبر ريتينا اكس دي ار مقاس 6.1 بوصة، نظام كاميرا متطور
+                  للحصول على صور أفضل في أي إضاءة
+                </p>
+                <div class="product-tools">
+                  <div class="product-btns">
+                    <button class="product-btn product-fav">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="product_single_reservation.html" class="product-img">
+                <img src="images/products/5.jpg" class="img-cover" />
+              </a>
+              <div class="product-text">
+                <div class="product-head">
+                  <h3 class="product-title">
+                    <a href="product_single_reservation.html">جوال ايفون 14</a>
+                  </h3>
+                  <span class="product-discout"> %10 </span>
+                  <span class="product-price"> 150.00 ر.س </span>
+                </div>
+                <p class="product-desc">
+                  شاشة سوبر ريتينا اكس دي ار مقاس 6.1 بوصة، نظام كاميرا متطور
+                  للحصول على صور أفضل في أي إضاءة
+                </p>
+                <div class="product-tools">
+                  <div class="product-btns">
+                    <button class="product-btn product-fav">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="product_single_reservation.html" class="product-img">
+                <img src="images/products/5.jpg" class="img-cover" />
+              </a>
+              <div class="product-text">
+                <div class="product-head">
+                  <h3 class="product-title">
+                    <a href="product_single_reservation.html">جوال ايفون 14</a>
+                  </h3>
+                  <span class="product-discout"> %10 </span>
+                  <span class="product-price"> 150.00 ر.س </span>
+                </div>
+                <p class="product-desc">
+                  شاشة سوبر ريتينا اكس دي ار مقاس 6.1 بوصة، نظام كاميرا متطور
+                  للحصول على صور أفضل في أي إضاءة
+                </p>
+                <div class="product-tools">
+                  <div class="product-btns">
+                    <button class="product-btn product-fav">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="product_single_reservation.html" class="product-img">
+                <img src="images/products/5.jpg" class="img-cover" />
+              </a>
+              <div class="product-text">
+                <div class="product-head">
+                  <h3 class="product-title">
+                    <a href="product_single_reservation.html">جوال ايفون 14</a>
+                  </h3>
+                  <span class="product-discout"> %10 </span>
+                  <span class="product-price"> 150.00 ر.س </span>
+                </div>
+                <p class="product-desc">
+                  شاشة سوبر ريتينا اكس دي ار مقاس 6.1 بوصة، نظام كاميرا متطور
+                  للحصول على صور أفضل في أي إضاءة
+                </p>
+                <div class="product-tools">
+                  <div class="product-btns">
+                    <button class="product-btn product-fav">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="product_single_reservation.html" class="product-img">
+                <img src="images/products/5.jpg" class="img-cover" />
+              </a>
+              <div class="product-text">
+                <div class="product-head">
+                  <h3 class="product-title">
+                    <a href="product_single_reservation.html">جوال ايفون 14</a>
+                  </h3>
+                  <span class="product-discout"> %10 </span>
+                  <span class="product-price"> 150.00 ر.س </span>
+                </div>
+                <p class="product-desc">
+                  شاشة سوبر ريتينا اكس دي ار مقاس 6.1 بوصة، نظام كاميرا متطور
+                  للحصول على صور أفضل في أي إضاءة
+                </p>
+                <div class="product-tools">
+                  <div class="product-btns">
+                    <button class="product-btn product-fav">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="product_single_reservation.html" class="product-img">
+                <img src="images/products/5.jpg" class="img-cover" />
+              </a>
+              <div class="product-text">
+                <div class="product-head">
+                  <h3 class="product-title">
+                    <a href="product_single_reservation.html">جوال ايفون 14</a>
+                  </h3>
+                  <span class="product-discout"> %10 </span>
+                  <span class="product-price"> 150.00 ر.س </span>
+                </div>
+                <p class="product-desc">
+                  شاشة سوبر ريتينا اكس دي ار مقاس 6.1 بوصة، نظام كاميرا متطور
+                  للحصول على صور أفضل في أي إضاءة
+                </p>
+                <div class="product-tools">
+                  <div class="product-btns">
+                    <button class="product-btn product-fav">
+                      <i class="far fa-heart"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start Page Content -->
+
+    <!-- Start Testimonials -->
+    <section class="testimonials-section home-section">
+      <div class="container">
+        <div class="testimonials-slider custom-slider">
+          <div class="slider-content">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/1.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">عبدالله أحمد</h3>
+                      <div class="testimonial-rate">
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="testimonial-content">
+                        <p>متجر ممتاز</p>
+                        <span>13/5/2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/3.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">ليلى محمد</h3>
+                      <div class="testimonial-content">
+                        <p>هل المتجر جيد؟</p>
+                        <span>13/5/2024</span>
+                      </div>
+                      <div class="testimonial-answer">
+                        <img src="images/icons/logo.svg" alt="answer" />
+                        <p>نعم</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/2.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">عاصم محمد</h3>
+                      <div class="testimonial-rate">
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="testimonial-content">
+                        <p>متجر ممتاز</p>
+                        <span>13/5/2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/3.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">ليلى محمد</h3>
+                      <div class="testimonial-content">
+                        <p>هل المتجر جيد؟</p>
+                        <span>13/5/2024</span>
+                      </div>
+                      <div class="testimonial-answer">
+                        <img src="images/icons/logo.svg" alt="answer" />
+                        <p>نعم</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-pagination"></div>
+        </div>
+        <div class="btns-content">
+          <a
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#addQuestionModal"
+            class="default-btn"
+          >
+            أضف سؤالك
+          </a>
+          <a href="testimonials.html" class="default-btn secondary-btn">
+            عرض الكل
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- End Testimonials -->
+
+    <!-- Start Footer -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer">
+          <div class="footer-menu">
+            <h3 class="footer-title">روابط سريعة</h3>
+            <ul class="footer-list">
+              <li>
+                <a href="#!">المدونة</a>
+              </li>
+              <li>
+                <a href="#!">سياسة الاستبدال والاسترجاع</a>
+              </li>
+              <li>
+                <a href="#!">سياسة الاستخدام والخصوصية</a>
+              </li>
+              <li>
+                <a href="#!">الشروط والأحكام</a>
+              </li>
+              <li>
+                <a href="#!">نظام الولاء</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img src="images/footer_logo.svg" alt="logo" />
+            </div>
+            <p class="footer-desc">
+              واحد من أهم روّاد المواقع الإلكترونية المتخصصة في مجال لبيع
+              المنتجات والخدمات خلال أقصر وقت ممكن وبأقل جهد يُذكر و يوجد أقسام
+              رئيسية وفرعية لعرض وتصفّح مختلف أنواع السلع والخدمات بالموقع
+            </p>
+          </div>
+          <div class="footer-contacts">
+            <h3 class="footer-title">روابط التواصل</h3>
+            <ul class="contacts-list">
+              <li>
+                <a href="tel:+966 12345678">
+                  <i class="icon">
+                    <img src="images/icons/phone.svg" class="svg" alt="phone" />
+                  </i>
+                  <span class="en"> +966 12345678 </span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@example.com">
+                  <i class="icon">
+                    <img src="images/icons/email.svg" class="svg" alt="email" />
+                  </i>
+                  <span class="en"> info@example.com </span>
+                </a>
+              </li>
+            </ul>
+            <div class="soials">
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-snapchat"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="copyrights">جميع الحقوق محفوظة لمتجر الرياض 2024</p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Modal -->
+    <div
+      class="modal fade"
+      id="addQuestionModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">أضف سؤالك</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fas fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="modal-from">
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  placeholder="ادخل سؤالك"
+                ></textarea>
+              </div>
+              <button class="form-submit">إرسال</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/svg.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
