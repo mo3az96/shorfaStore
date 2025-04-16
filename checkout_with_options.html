@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <title>Client Store | Checkout</title>
+    <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/nouislider.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header class="header-section">
+      <div class="container">
+        <div class="header">
+          <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="logo" class="img-contain" />
+          </a>
+          <form class="search-form">
+            <div class="search-content">
+              <select class="search-select select2-trigger">
+                <option value="value1">المنتجات</option>
+                <option value="value2">المجموعات</option>
+                <option value="value3">المنتجات الرقمية</option>
+                <option value="value4">الخدمات</option>
+                <option value="value5">الحجوزات</option>
+              </select>
+              <input
+                type="search"
+                class="search-input"
+                placeholder="ابحث عن ما تريد.."
+              />
+              <button class="search-btn">
+                <img src="images/icons/search.svg" alt="search" class="svg" />
+              </button>
+            </div>
+          </form>
+          <div class="header-tools">
+            <a href="#!" class="header-icon menu-btn">
+              <i class="far fa-bars"></i>
+            </a>
+            <a href="#!" class="header-icon wishlist-icon">
+              <i class="far fa-heart"></i>
+              <small class="count">0</small>
+            </a>
+            <a href="#!" class="header-icon notification-icon">
+              <img
+                src="images/icons/notification.svg"
+                alt="notification"
+                class="svg"
+              />
+              <small class="count">0</small>
+            </a>
+            <div class="dropdown-content user_dropdown-content">
+              <a
+                role="button"
+                type="button"
+                class="header_icon-content header_user-content dropdown-btn"
+              >
+                <span class="header-icon user-icon">
+                  <img src="images/icons/user.svg" alt="user" class="svg" />
+                </span>
+                <div class="header_icon-text">
+                  <span>أهلاً بك</span>
+                  <p>عبدالله أحمد</p>
+                </div>
+              </a>
+              <ul class="dropdown-list user_dropdown-list">
+                <li>
+                  <a href="account/profile.html">الملف الشخصي</a>
+                </li>
+                <li>
+                  <a href="account/orders_list.html">الطلبات</a>
+                </li>
+                <li>
+                  <a href="account/wallet.html">المحفظة</a>
+                </li>
+                <li>
+                  <a href="account/address_list.html">العناوين المحفوظة</a>
+                </li>
+                <li>
+                  <a href="#!" class="logout">تسجيل خروج</a>
+                </li>
+              </ul>
+            </div>
+            <a href="#!" class="header_icon-content header_cart-content">
+              <span class="header-icon cart-icon">
+                <img src="images/icons/cart.svg" alt="cart" class="svg" />
+                <small class="count">0</small>
+              </span>
+              <div class="header_icon-text">
+                <span>سلة المشتريات</span>
+                <p>300.00 ر.س</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <nav class="header-nav">
+        <div class="container">
+          <button class="menu-close">
+            <i class="far fa-times"></i>
+          </button>
+          <div class="nav-content">
+            <ul class="nav-list">
+              <li>
+                <a href="#!">أحدث المنتجات</a>
+              </li>
+              <li>
+                <a href="#!">المجموعات</a>
+              </li>
+              <li>
+                <a href="#!">منتجات رقمية</a>
+              </li>
+              <li>
+                <a href="#!">خدمات حسب الطلب</a>
+              </li>
+              <li>
+                <a href="#!">حجوزات</a>
+              </li>
+            </ul>
+            <div class="nav-tools">
+              <div class="dropdown-content lang-content">
+                <button class="dropdown-btn lang-btn">اللغة العربية</button>
+                <ul class="dropdown-list lang-list">
+                  <li>
+                    <a href="#!" class="active">اللغة العربية</a>
+                  </li>
+                  <li>
+                    <a href="#!">English</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown-content currency-content">
+                <button class="dropdown-btn currency-btn">
+                  <img src="images/currency/sar.svg" alt="sar" />
+                  ريال سعودي
+                </button>
+                <ul class="dropdown-list currency-list">
+                  <li>
+                    <button class="active">
+                      <img src="images/currency/sar.svg" alt="sar" />
+                      ريال سعودي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/aed.svg" alt="sar" />
+                      درهم إماراتي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/bhd.svg" alt="sar" />
+                      دينار بحريني
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/kwd.svg" alt="sar" />
+                      دينار كويتي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="images/currency/qar.svg" alt="sar" />
+                      ريال قطري
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Page Content -->
+    <section class="page-section checkout-page">
+      <div class="container">
+        <div class="page-content">
+          <h1 class="page-title">شراء</h1>
+          <div class="cart-content">
+            <div class="cart-item">
+              <div class="product_cart-item">
+                <a href="product_single.html" class="product-img">
+                  <img src="images/products/3.jpg" class="img-cover" />
+                </a>
+                <div class="product-text">
+                  <div class="product-info">
+                    <h3 class="product-title">
+                      <a href="product_single.html">قسيمة شرائية</a>
+                    </h3>
+                    <span class="product-options"> أسود, 120GB</span>
+                    <div class="product-qty">
+                      <button
+                        class="qty-btn"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                      >
+                        <i class="far fa-plus"></i>
+                      </button>
+                      <input
+                        type="number"
+                        class="qty-input"
+                        value="1"
+                        min="1"
+                        max="10"
+                        readonly
+                      />
+                      <button
+                        class="qty-btn"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                      >
+                        <i class="far fa-minus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-price">
+                    <p>
+                      <strong>150.00 ر.س</strong>
+                      <del>180.00 ر.س</del>
+                    </p>
+                    <span class="product-offer"> عرض اليوم: خصم 10% </span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-form">
+                <div class="form-group">
+                  <label class="form-label"> اللون </label>
+                  <select class="form-control">
+                    <option value="value1">أسود</option>
+                    <option value="value2">أحمر</option>
+                    <option value="value3">أحمر</option>
+                    <option value="value4">فضى</option>
+                    <option value="value5">ذهبى</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label"> الحجم </label>
+                  <select class="form-control">
+                    <option value="value1">120GB</option>
+                    <option value="value2">120GB</option>
+                    <option value="value3">120GB</option>
+                    <option value="value4">120GB</option>
+                    <option value="value5">120GB</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-content">
+            <div class="checkout-col">
+              <div class="totals-card">
+                <div class="form-group">
+                  <label class="form-label">
+                    <img src="images/icons/offer.svg" class="svg" />
+                    كوبون الخصم
+                  </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="ادخل كوبون الخصم"
+                  />
+                </div>
+              </div>
+              <div class="totals-card">
+                <div class="totals-head">
+                  <h4 class="totals-title">ملخص الطلب</h4>
+                  <a href="#!" class="totals-link">أضف عنوان</a>
+                </div>
+                <div class="checkout_address-list">
+                  <label class="checkout_address-item">
+                    <input type="radio" name="address" />
+                    <div class="address-info">
+                      <span class="checkmark"></span>
+                      <span class="address-title">
+                        30 شارع طاهر الجزائري,مقابل طوبكابي,مكة المكرمة
+                      </span>
+                      <div class="address-tools">
+                        <a href="#!" class="address-tool address-edit">
+                          <img src="images/icons/edit.svg" class="svg" />
+                        </a>
+                        <a href="#!" class="address-tool address-delete">
+                          <img src="images/icons/delete.svg" class="svg" />
+                        </a>
+                      </div>
+                    </div>
+                  </label>
+                  <label class="checkout_address-item">
+                    <input type="radio" name="address" />
+                    <div class="address-info">
+                      <span class="checkmark"></span>
+                      <span class="address-title">
+                        95 شارع ناصر بن حعوان,بجوار مطعم زهرة التنور ,حفر الباطن
+                      </span>
+                      <div class="address-tools">
+                        <a href="#!" class="address-tool address-edit">
+                          <img src="images/icons/edit.svg" class="svg" />
+                        </a>
+                        <a href="#!" class="address-tool address-delete">
+                          <img src="images/icons/delete.svg" class="svg" />
+                        </a>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="totals-card shipTo">
+                <div class="form-tools">
+                  <div class="custom-checkbox">
+                    <label>
+                      <input type="checkbox" id="shipTo" />
+                      <span class="checkmark"></span>
+                      <span class="checktext">استلام الطلب عبر شخص آخر</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="shipTo-info" id="shipToForm" style="display: none">
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="اسم المستلم"
+                    />
+                  </div>
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <div class="tel-content">
+                        <select class="country-key">
+                          <option
+                            value="+965"
+                            data-flag="images/flags/+965.svg"
+                          >
+                            +965
+                          </option>
+                          <option
+                            value="+966"
+                            data-flag="images/flags/+966.svg"
+                            selected
+                          >
+                            +966
+                          </option>
+                          <option
+                            value="+971"
+                            data-flag="images/flags/+971.svg"
+                          >
+                            +971
+                          </option>
+                          <option
+                            value="+973"
+                            data-flag="images/flags/+973.svg"
+                          >
+                            +973
+                          </option>
+                          <option
+                            value="+974"
+                            data-flag="images/flags/+974.svg"
+                          >
+                            +974
+                          </option>
+                        </select>
+                        <input
+                          type="tel"
+                          class="form-control"
+                          placeholder="ادخل رقم الجوال"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        class="form-control"
+                        type="email"
+                        placeholder="البريد الإلكتروني"
+                      />
+                    </div>
+                  </div>
+                  <div class="custom-checkbox">
+                    <label>
+                      <input type="checkbox" value="" />
+                      <span class="checkmark"></span>
+                      <span class="checktext">استلام رسائل إشعارات الطلب</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-col">
+              <div class="totals-card">
+                <h4 class="totals-title">حدد شركة الشحن الخاصة بطلبك</h4>
+                <div class="checkout-radios shipping-radios">
+                  <label class="checkout-radio">
+                    <input type="radio" name="shipping" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">
+                        سمسا
+                        <span> خلال 10 أيام </span>
+                      </p>
+                      <span class="radio-value"> 20.00 ر.س </span>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="shipping" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">
+                        أرامكس
+                        <span> خلال 10 أيام </span>
+                      </p>
+                      <span class="radio-value"> 20.00 ر.س </span>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="shipping" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">
+                        أي مكان
+                        <span> خلال 10 أيام </span>
+                      </p>
+                      <span class="radio-value"> 20.00 ر.س </span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="totals-card">
+                <h4 class="totals-title">طريقة الدفع</h4>
+                <div class="checkout-radios payment-radios">
+                  <label class="checkout-radio">
+                    <input type="radio" name="payment" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">فيزا</p>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="payment" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">ماستر</p>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="payment" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">أبل باي</p>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="payment" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">المحفظة</p>
+                    </div>
+                  </label>
+                  <label class="checkout-radio">
+                    <input type="radio" name="payment" />
+                    <span class="checkmark"></span>
+                    <div class="radio-info">
+                      <p class="radio-title">عند الاستلام</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="totals-card">
+                <div class="form-group">
+                  <label class="form-label"> أضف ملاحظتك </label>
+                  <textarea
+                    class="form-control"
+                    placeholder="ادخل ملاحظتك"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="totals-card">
+                <h4 class="totals-title">ملخص الطلب</h4>
+                <div class="total-item">
+                  <span class="title">قيمة المنتجات</span>
+                  <span class="value">300.00 ر.س</span>
+                </div>
+                <div class="total-item">
+                  <span class="title">قيمة الخصم</span>
+                  <span class="value">30.00 ر.س</span>
+                </div>
+                <div class="total-item">
+                  <span class="title">قيمة الشحن</span>
+                  <span class="value">30.00 ر.س</span>
+                </div>
+                <div class="total-item">
+                  <span class="title">الإجمالي</span>
+                  <span class="value">300.00 ر.س</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-btns btns-content">
+            <a
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#successModal"
+              class="default-btn"
+            >
+              إرسال الطلب
+            </a>
+            <a href="index.html" class="default-btn secondary-btn">
+              إلغاء الطلب
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start Page Content -->
+
+    <!-- Start Footer -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer">
+          <div class="footer-menu">
+            <h3 class="footer-title">روابط سريعة</h3>
+            <ul class="footer-list">
+              <li>
+                <a href="#!">المدونة</a>
+              </li>
+              <li>
+                <a href="#!">سياسة الاستبدال والاسترجاع</a>
+              </li>
+              <li>
+                <a href="#!">سياسة الاستخدام والخصوصية</a>
+              </li>
+              <li>
+                <a href="#!">الشروط والأحكام</a>
+              </li>
+              <li>
+                <a href="#!">نظام الولاء</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img src="images/footer_logo.svg" alt="logo" />
+            </div>
+            <p class="footer-desc">
+              واحد من أهم روّاد المواقع الإلكترونية المتخصصة في مجال لبيع
+              المنتجات والخدمات خلال أقصر وقت ممكن وبأقل جهد يُذكر و يوجد أقسام
+              رئيسية وفرعية لعرض وتصفّح مختلف أنواع السلع والخدمات بالموقع
+            </p>
+          </div>
+          <div class="footer-contacts">
+            <h3 class="footer-title">روابط التواصل</h3>
+            <ul class="contacts-list">
+              <li>
+                <a href="tel:+966 12345678">
+                  <i class="icon">
+                    <img src="images/icons/phone.svg" class="svg" alt="phone" />
+                  </i>
+                  <span class="en"> +966 12345678 </span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@example.com">
+                  <i class="icon">
+                    <img src="images/icons/email.svg" class="svg" alt="email" />
+                  </i>
+                  <span class="en"> info@example.com </span>
+                </a>
+              </li>
+            </ul>
+            <div class="soials">
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-snapchat"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="copyrights">جميع الحقوق محفوظة لمتجر الرياض 2024</p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="success-content">
+              <i class="fas fa-check-circle fa-sharp"></i>
+              <h2 class="modal-title">تم إرسال الطلب بنجاح</h2>
+              <div class="btns-content">
+                <a
+                  href="account/orders_list.html"
+                  class="form-submit secondary-btn"
+                >
+                  متابعة الطلب
+                </a>
+                <a href="index.html" class="form-submit"> العودة للرئيسية </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/svg.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#shipTo").change(function (e) {
+          e.preventDefault();
+          if ($(this).is(":checked")) {
+            $("#shipToForm").slideDown();
+          } else {
+            $("#shipToForm").slideUp();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
