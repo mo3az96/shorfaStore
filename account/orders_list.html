@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <title>Client Store | Address</title>
+    <link rel="shortcut icon" type="img/png" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../css/select2.min.css" />
+    <link rel="stylesheet" href="../css/nouislider.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header class="header-section">
+      <div class="container">
+        <div class="header">
+          <a href="../index.html" class="logo">
+            <img src="../images/logo.svg" alt="logo" class="img-contain" />
+          </a>
+          <form class="search-form">
+            <div class="search-content">
+              <select class="search-select select2-trigger">
+                <option value="value1">المنتجات</option>
+                <option value="value2">المجموعات</option>
+                <option value="value3">المنتجات الرقمية</option>
+                <option value="value4">الخدمات</option>
+                <option value="value5">الحجوزات</option>
+              </select>
+              <input
+                type="search"
+                class="search-input"
+                placeholder="ابحث عن ما تريد.."
+              />
+              <button class="search-btn">
+                <img
+                  src="../images/icons/search.svg"
+                  alt="search"
+                  class="svg"
+                />
+              </button>
+            </div>
+          </form>
+          <div class="header-tools">
+            <a href="#!" class="header-icon menu-btn">
+              <i class="far fa-bars"></i>
+            </a>
+            <a href="#!" class="header-icon whishlist-icon">
+              <i class="far fa-heart"></i>
+              <small class="count">0</small>
+            </a>
+            <a href="#!" class="header-icon notification-icon">
+              <img
+                src="../images/icons/notification.svg"
+                alt="notification"
+                class="svg"
+              />
+              <small class="count">0</small>
+            </a>
+            <div class="dropdown-content user_dropdown-content">
+              <a
+                role="button"
+                type="button"
+                class="header_icon-content header_user-content dropdown-btn"
+              >
+                <span class="header-icon user-icon">
+                  <img src="../images/icons/user.svg" alt="user" class="svg" />
+                </span>
+                <div class="header_icon-text">
+                  <span>أهلاً بك</span>
+                  <p>عبدالله أحمد</p>
+                </div>
+              </a>
+              <ul class="dropdown-list user_dropdown-list">
+                <li>
+                  <a href="profile.html">الملف الشخصي</a>
+                </li>
+                <li>
+                  <a href="orders_list.html">الطلبات</a>
+                </li>
+                <li>
+                  <a href="wallet.html">المحفظة</a>
+                </li>
+                <li>
+                  <a href="address_list.html">العناوين المحفوظة</a>
+                </li>
+                <li>
+                  <a href="#!" class="logout">تسجيل خروج</a>
+                </li>
+              </ul>
+            </div>
+            <a href="#!" class="header_icon-content header_cart-content">
+              <span class="header-icon cart-icon">
+                <img src="../images/icons/cart.svg" alt="cart" class="svg" />
+                <small class="count">0</small>
+              </span>
+              <div class="header_icon-text">
+                <span>سلة المشتريات</span>
+                <p>300.00 ر.س</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <nav class="header-nav">
+        <div class="container">
+          <button class="menu-close">
+            <i class="far fa-times"></i>
+          </button>
+          <div class="nav-content">
+            <ul class="nav-list">
+              <li>
+                <a href="#!">أحدث المنتجات</a>
+              </li>
+              <li>
+                <a href="#!">المجموعات</a>
+              </li>
+              <li>
+                <a href="#!">منتجات رقمية</a>
+              </li>
+              <li>
+                <a href="#!">خدمات حسب الطلب</a>
+              </li>
+              <li>
+                <a href="#!">حجوزات</a>
+              </li>
+            </ul>
+            <div class="nav-tools">
+              <div class="dropdown-content lang-content">
+                <button class="dropdown-btn lang-btn">اللغة العربية</button>
+                <ul class="dropdown-list lang-list">
+                  <li>
+                    <a href="#!" class="active">اللغة العربية</a>
+                  </li>
+                  <li>
+                    <a href="#!">English</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown-content currency-content">
+                <button class="dropdown-btn currency-btn">
+                  <img src="../images/currency/sar.svg" alt="sar" />
+                  ريال سعودي
+                </button>
+                <ul class="dropdown-list currency-list">
+                  <li>
+                    <button class="active">
+                      <img src="../images/currency/sar.svg" alt="sar" />
+                      ريال سعودي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="../images/currency/aed.svg" alt="sar" />
+                      درهم إماراتي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="../images/currency/bhd.svg" alt="sar" />
+                      دينار بحريني
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="../images/currency/kwd.svg" alt="sar" />
+                      دينار كويتي
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <img src="../images/currency/qar.svg" alt="sar" />
+                      ريال قطري
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Page Content -->
+    <section class="page-section profile-page">
+      <div class="container">
+        <div class="page-content">
+          <h1 class="page-title">الطلبات</h1>
+          <div class="orders-content">
+            <ul class="nav order-tabs" role="tablist">
+              <li class="nav-item">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#orders"
+                  type="button"
+                  role="tab"
+                >
+                  طلبات الشراء
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#returns"
+                  type="button"
+                  role="tab"
+                >
+                  طلبات الاسترجاع
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#reservations"
+                  type="button"
+                  role="tab"
+                >
+                  الحجوزات
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="orders">
+                <div class="status_tabs-content">
+                  <ul class="nav status-tabs" role="tablist">
+                    <li class="nav-item">
+                      <button
+                        class="nav-link active"
+                        data-bs-toggle="tab"
+                        data-bs-target="#newOrders"
+                        type="button"
+                        role="tab"
+                      >
+                        جديدة
+                      </button>
+                    </li>
+                    <li class="nav-item">
+                      <button
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#currentOrders"
+                        type="button"
+                        role="tab"
+                      >
+                        حالية
+                      </button>
+                    </li>
+                    <li class="nav-item">
+                      <button
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#expiredOrders"
+                        type="button"
+                        role="tab"
+                      >
+                        منتهية
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="newOrders">
+                      <div class="orders-list">
+                        <a href="order_single.html" class="order-item">
+                          <div class="order-head">
+                            <h3 class="order-number">رقم الطلب:#1223</h3>
+                            <span class="order-status"> جديد </span>
+                          </div>
+                          <div class="order-body">
+                            <span class="order-price"> 150.00 ر.س </span>
+                            <span class="order-time">
+                              20/5/2024 - 10:00pm
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="currentOrders">
+                      <div class="orders-list">
+                        <a href="order_single.html" class="order-item">
+                          <div class="order-head">
+                            <h3 class="order-number">رقم الطلب:#1223</h3>
+                            <span class="order-status"> قيد التنفيذ </span>
+                          </div>
+                          <div class="order-body">
+                            <span class="order-price"> 150.00 ر.س </span>
+                            <span class="order-time">
+                              20/5/2024 - 10:00pm
+                            </span>
+                          </div>
+                        </a>
+                        <a href="order_single.html" class="order-item">
+                          <div class="order-head">
+                            <h3 class="order-number">رقم الطلب:#1223</h3>
+                            <span class="order-status"> قيد التوصيل </span>
+                          </div>
+                          <div class="order-body">
+                            <span class="order-price"> 150.00 ر.س </span>
+                            <span class="order-time">
+                              20/5/2024 - 10:00pm
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="expiredOrders">
+                      <div class="orders-list">
+                        <a href="order_single.html" class="order-item">
+                          <div class="order-head">
+                            <h3 class="order-number">رقم الطلب:#1223</h3>
+                            <span class="order-status"> تم التوصيل </span>
+                          </div>
+                          <div class="order-body">
+                            <span class="order-price"> 150.00 ر.س </span>
+                            <span class="order-time">
+                              20/5/2024 - 10:00pm
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="returns">
+                <div class="status_tabs-content">
+                  <ul class="nav status-tabs" role="tablist">
+                    <li class="nav-item">
+                      <button
+                        class="nav-link active"
+                        data-bs-toggle="tab"
+                        data-bs-target="#newReturns"
+                        type="button"
+                        role="tab"
+                      >
+                        جديدة
+                      </button>
+                    </li>
+                    <li class="nav-item">
+                      <button
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#currentReturns"
+                        type="button"
+                        role="tab"
+                      >
+                        حالية
+                      </button>
+                    </li>
+                    <li class="nav-item">
+                      <button
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#expiredReturns"
+                        type="button"
+                        role="tab"
+                      >
+                        منتهية
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="newReturns">
+                      <div class="orders-list">
+                        <a href="order_single.html" class="order-item">
+                          <div class="order-head">
+                            <h3 class="order-number">رقم الطلب:#1223</h3>
+                            <span class="order-status"> جديد </span>
+                          </div>
+                          <div class="order-body">
+                            <span class="order-price"> 150.00 ر.س </span>
+                            <span class="order-time">
+                              20/5/2024 - 10:00pm
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="currentReturns">
+                      <div class="orders-list">
+                        <a href="order_single.html" class="order-item">
+                          <div class="order-head">
+                            <h3 class="order-number">رقم الطلب:#1223</h3>
+                            <span class="order-status"> قيد الاسترجاع </span>
+                          </div>
+                          <div class="order-body">
+                            <span class="order-price"> 150.00 ر.س </span>
+                            <span class="order-time">
+                              20/5/2024 - 10:00pm
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="expiredReturns">
+                      <div class="orders-list">
+                        <a href="order_single.html" class="order-item">
+                          <div class="order-head">
+                            <h3 class="order-number">رقم الطلب:#1223</h3>
+                            <span class="order-status"> مسترجع </span>
+                          </div>
+                          <div class="order-body">
+                            <span class="order-price"> 150.00 ر.س </span>
+                            <span class="order-time">
+                              20/5/2024 - 10:00pm
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="reservations">
+                <div class="status_tabs-content">
+                  <ul class="nav status-tabs" role="tablist">
+                    <li class="nav-item">
+                      <button
+                        class="nav-link active"
+                        data-bs-toggle="tab"
+                        data-bs-target="#newReservations"
+                        type="button"
+                        role="tab"
+                      >
+                        جديدة
+                      </button>
+                    </li>
+                    <li class="nav-item">
+                      <button
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#currentReservations"
+                        type="button"
+                        role="tab"
+                      >
+                        حالية
+                      </button>
+                    </li>
+                    <li class="nav-item">
+                      <button
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#expiredReservations"
+                        type="button"
+                        role="tab"
+                      >
+                        منتهية
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="newReservations">
+                      <div class="orders-list">
+                        <a href="order_single.html" class="order-item">
+                          <div class="order-head">
+                            <h3 class="order-number">رقم الطلب:#1223</h3>
+                            <span class="order-status"> جديد </span>
+                          </div>
+                          <div class="order-body">
+                            <span class="order-price"> 150.00 ر.س </span>
+                            <span class="order-time">
+                              20/5/2024 - 10:00pm
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="currentReservations">
+                      <div class="orders-list">
+                        <a href="order_single.html" class="order-item">
+                          <div class="order-head">
+                            <h3 class="order-number">رقم الطلب:#1223</h3>
+                            <span class="order-status"> حالي </span>
+                          </div>
+                          <div class="order-body">
+                            <span class="order-price"> 150.00 ر.س </span>
+                            <span class="order-time">
+                              20/5/2024 - 10:00pm
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="expiredReservations">
+                      <div class="orders-list">
+                        <a href="order_single.html" class="order-item">
+                          <div class="order-head">
+                            <h3 class="order-number">رقم الطلب:#1223</h3>
+                            <span class="order-status"> منتهي </span>
+                          </div>
+                          <div class="order-body">
+                            <span class="order-price"> 150.00 ر.س </span>
+                            <span class="order-time">
+                              20/5/2024 - 10:00pm
+                            </span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start Page Content -->
+
+    <!-- Start Footer -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer">
+          <div class="footer-menu">
+            <h3 class="footer-title">روابط سريعة</h3>
+            <ul class="footer-list">
+              <li>
+                <a href="#!">المدونة</a>
+              </li>
+              <li>
+                <a href="#!">سياسة الاستبدال والاسترجاع</a>
+              </li>
+              <li>
+                <a href="#!">سياسة الاستخدام والخصوصية</a>
+              </li>
+              <li>
+                <a href="#!">الشروط والأحكام</a>
+              </li>
+              <li>
+                <a href="#!">نظام الولاء</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img src="../images/footer_logo.svg" alt="logo" />
+            </div>
+            <p class="footer-desc">
+              واحد من أهم روّاد المواقع الإلكترونية المتخصصة في مجال لبيع
+              المنتجات والخدمات خلال أقصر وقت ممكن وبأقل جهد يُذكر و يوجد أقسام
+              رئيسية وفرعية لعرض وتصفّح مختلف أنواع السلع والخدمات بالموقع
+            </p>
+          </div>
+          <div class="footer-contacts">
+            <h3 class="footer-title">روابط التواصل</h3>
+            <ul class="contacts-list">
+              <li>
+                <a href="tel:+966 12345678">
+                  <i class="icon">
+                    <img
+                      src="../images/icons/phone.svg"
+                      class="svg"
+                      alt="phone"
+                    />
+                  </i>
+                  <span class="en"> +966 12345678 </span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@example.com">
+                  <i class="icon">
+                    <img
+                      src="../images/icons/email.svg"
+                      class="svg"
+                      alt="email"
+                    />
+                  </i>
+                  <span class="en"> info@example.com </span>
+                </a>
+              </li>
+            </ul>
+            <div class="soials">
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-snapchat"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#!" class="social" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="copyrights">جميع الحقوق محفوظة لمتجر الرياض 2024</p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/select2.min.js"></script>
+    <script src="../js/nouislider.min.js"></script>
+    <script src="../js/svg.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
