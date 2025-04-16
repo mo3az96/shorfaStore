@@ -109,6 +109,11 @@ $(document).ready(function () {
       dropdownCssClass: "dropdown-list",
     });
   }
+  $(".multiple-select-trigger").select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: "multiple-list",
+  });
+
 
   // Password
   $(".password-icon").click(function () {
