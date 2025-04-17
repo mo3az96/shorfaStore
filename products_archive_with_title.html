@@ -899,5 +899,41 @@
     <script src="js/nouislider.min.js"></script>
     <script src="js/svg.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      const slider = document.getElementById("price-slider");
+      if (slider) {
+        const [min, max] = [
+          +$(slider).data("min-price"),
+          +$(slider).data("max-price"),
+        ];
+        const dir = document.documentElement.dir || "ltr";
+        const symbol = dir === "rtl" ? "ر.س" : "R.S";
+        const inputs = [
+          document.getElementById("min-price"),
+          document.getElementById("max-price"),
+        ];
+
+        noUiSlider.create(slider, {
+          start: [min, max],
+          connect: true,
+          tooltips: [true, true].map(() => ({
+            to: (v) => `${~~v} ${symbol}`,
+          })),
+          step: 1,
+          range: { min, max },
+        });
+
+        slider.noUiSlider.on("update", (values, handle) => {
+          inputs[handle].value = values[handle];
+        });
+
+        // Reset slider when form resets
+        slider.closest("form")?.addEventListener("reset", () => {
+          setTimeout(() => {
+            slider.noUiSlider.set([min, max]);
+          });
+        });
+      }
+    </script>
   </body>
 </html>

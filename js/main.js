@@ -114,7 +114,6 @@ $(document).ready(function () {
     dropdownCssClass: "multiple-list",
   });
 
-
   // Password
   $(".password-icon").click(function () {
     var input = $(this).parents(".password-content").find("input");
@@ -236,42 +235,6 @@ $(document).ready(function () {
     $("#all").prop("checked", boxes.length === boxes.filter(":checked").length);
   });
 
-  // Price
-  const slider = document.getElementById("price-slider");
-  if (slider) {
-    const [min, max] = [
-      +$(slider).data("min-price"),
-      +$(slider).data("max-price"),
-    ];
-    const dir = document.documentElement.dir || "ltr";
-    const symbol = dir === "rtl" ? "ر.س" : "R.S";
-    const inputs = [
-      document.getElementById("min-price"),
-      document.getElementById("max-price"),
-    ];
-
-    noUiSlider.create(slider, {
-      start: [min, max],
-      connect: true,
-      tooltips: [true, true].map(() => ({
-        to: (v) => `${~~v} ${symbol}`,
-      })),
-      step: 1,
-      range: { min, max },
-    });
-
-    slider.noUiSlider.on("update", (values, handle) => {
-      inputs[handle].value = values[handle];
-    });
-
-    // Reset slider when form resets
-    slider.closest("form")?.addEventListener("reset", () => {
-      setTimeout(() => {
-        slider.noUiSlider.set([min, max]);
-      });
-    });
-  }
-
   // Single Product Slider
   let singleProductSwiper = new Swiper(".product_gallery-slider .swiper", {
     loop: true,
@@ -308,4 +271,16 @@ function profileImg(input) {
       ? (window.URL || window.webkitURL).createObjectURL(file)
       : $(input).attr("data-palceholder")
   );
+}
+
+// Qty input
+function stepQty(btn, direction) {
+  const input = btn.parentNode.querySelector("input[type=number]");
+  if (direction === "up") {
+    input.stepUp();
+  } else {
+    input.stepDown();
+  }
+
+  $(input).trigger("change");
 }
