@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <title>Client Store | Checkout</title>
+    <title>Client Store | Information</title>
     <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
@@ -187,224 +187,163 @@
     <!-- End Header -->
 
     <!-- Start Page Content -->
-    <section class="page-section reservation-page">
+    <section class="page-section information-page">
       <div class="container">
         <div class="page-content">
-          <h1 class="page-title">استكمال الحجز</h1>
-          <div class="cart-content">
-            <div class="cart-item">
-              <div class="product_cart-item reservation_cart-item">
-                <a href="product_single.html" class="product-img">
-                  <img src="images/products/3.jpg" class="img-cover" />
-                </a>
-                <div class="product-text">
-                  <div class="product-info">
-                    <h3 class="product-title">
-                      <a href="product_single.html">قسيمة شرائية</a>
-                    </h3>
-                    <div class="product-price">
-                      <p>
-                        <strong>150.00 ر.س</strong>
-                        <del>180.00 ر.س</del>
-                      </p>
-                    </div>
-                  </div>
-                  <p class="product-desc">
-                    قم بإنشاء حفلتك واحتفل بمناسبتك في أفضل الأماكن بالمملكة
-                    العربية السعودية ,قم بالحجز الآن
-                  </p>
-                </div>
-              </div>
-              <div class="reservation-info">
-                <div class="reservation-item">
-                  <span class="item-icon">
-                    <img
-                      src="images/icons/reservation/calendar.svg"
-                      class="img-contain"
-                    />
-                  </span>
-                  <div class="item-info">
-                    <span class="title"> عدد المواعيد </span>
-                    <strong class="value"> 3 </strong>
-                  </div>
-                </div>
-                <div class="reservation-item">
-                  <span class="item-icon">
-                    <img
-                      src="images/icons/reservation/time.svg"
-                      class="img-contain"
-                    />
-                  </span>
-                  <div class="item-info">
-                    <span class="title"> مدة الموعد </span>
-                    <strong class="value"> 30 دقيقة </strong>
-                  </div>
-                </div>
-                <div class="reservation-item">
-                  <span class="item-icon">
-                    <img
-                      src="images/icons/reservation/seats.svg"
-                      class="img-contain"
-                    />
-                  </span>
-                  <div class="item-info">
-                    <span class="title"> عدد المقاعد </span>
-                    <strong class="value"> 12 </strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="reservation-content">
-            <div class="select-date">
-              <div id="calendar"></div>
-            </div>
-            <div class="select-time">
-              <ul class="times-container" id="time-container"></ul>
-            </div>
-          </div>
-          <div class="checkout-content">
-            <div class="checkout-col">
-              <div class="totals-card">
-                <div class="form-group">
-                  <label class="form-label"> عدد المقاعد </label>
-                  <div class="product-qty">
-                    <button
-                      class="qty-btn"
-                      onclick="stepQty(this, 'up')"
-                    >
-                      <i class="far fa-plus"></i>
-                    </button>
-                    <input
-                      type="number"
-                      class="qty-input"
-                      value="1"
-                      min="1"
-                      max="10"
-                      readonly
-                    />
-                    <button
-                      class="qty-btn"
-                      onclick="stepQty(this, 'down')"
-                    >
-                      <i class="far fa-minus"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="form-label"> الاسم </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="ادخل الاسم"
-                  />
-                </div>
-                <div class="form-group">
-                  <label class="form-label"> العمر </label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    placeholder="ادخل العمر"
-                  />
-                </div>
-              </div>
-              <div class="totals-card">
-                <h4 class="totals-title">مواعيد الجلسات</h4>
-                <div id="time_date-container"></div>
-              </div>
-            </div>
-            <div class="checkout-col">
-              <div class="totals-card">
-                <div class="form-group">
-                  <label class="form-label">
-                    <img src="images/icons/offer.svg" class="svg" />
-                    كوبون الخصم
-                  </label>
-                  <input
-                    class="form-control"
-                    type="text"
-                    placeholder="ادخل كوبون الخصم"
-                  />
-                </div>
-              </div>
-              <div class="totals-card">
-                <h4 class="totals-title">طريقة الدفع</h4>
-                <div class="checkout-radios payment-radios">
-                  <label class="checkout-radio">
-                    <input type="radio" name="payment" />
-                    <span class="checkmark"></span>
-                    <div class="radio-info">
-                      <p class="radio-title">فيزا</p>
-                    </div>
-                  </label>
-                  <label class="checkout-radio">
-                    <input type="radio" name="payment" />
-                    <span class="checkmark"></span>
-                    <div class="radio-info">
-                      <p class="radio-title">ماستر</p>
-                    </div>
-                  </label>
-                  <label class="checkout-radio">
-                    <input type="radio" name="payment" />
-                    <span class="checkmark"></span>
-                    <div class="radio-info">
-                      <p class="radio-title">أبل باي</p>
-                    </div>
-                  </label>
-                  <label class="checkout-radio">
-                    <input type="radio" name="payment" />
-                    <span class="checkmark"></span>
-                    <div class="radio-info">
-                      <p class="radio-title">المحفظة</p>
-                    </div>
-                  </label>
-                  <label class="checkout-radio">
-                    <input type="radio" name="payment" />
-                    <span class="checkmark"></span>
-                    <div class="radio-info">
-                      <p class="radio-title">عند الاستلام</p>
-                    </div>
-                  </label>
-                </div>
-              </div>
-              <div class="totals-card">
-                <h4 class="totals-title">ملخص الطلب</h4>
-                <div class="total-item">
-                  <span class="title">قيمة المنتجات</span>
-                  <span class="value">300.00 ر.س</span>
-                </div>
-                <div class="total-item">
-                  <span class="title">قيمة الخصم</span>
-                  <span class="value">30.00 ر.س</span>
-                </div>
-                <div class="total-item">
-                  <span class="title">قيمة الشحن</span>
-                  <span class="value">30.00 ر.س</span>
-                </div>
-                <div class="total-item">
-                  <span class="title">الإجمالي</span>
-                  <span class="value">300.00 ر.س</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="cart-btns btns-content">
-            <a
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#successModal"
-              class="default-btn"
-            >
-              حجز
-            </a>
-            <a href="index.html" class="default-btn secondary-btn">
-              إلغاء الطلب
-            </a>
+          <h1 class="page-title">سياسة الاستبدال والاسترجاع</h1>
+          <div class="editor-content">
+            <ul>
+              <li>
+                يسمح بإرجاع جميع المنتجات خلال مدة لا تتجاوز 3 أيام من استلام
+                الطلب، وحفاظاً على جودة المنتج وصلاحية الحفظ فإنه لا يمكن
+                إرجاعها بعد ذلك.
+              </li>
+              <li>
+                كما يسمح باستبدال المنتج خلال مدة لا تتجاوز 7 أيام من استلام
+                الطلب.
+              </li>
+              <li>
+                سيتم خصم جميع مبالغ الشحن والتوصيل، ويشمل ذلك تكلفة الشحن لتوصيل
+                الطلب لك، بالإضافة إلى تكلفة الشحن لإرجاع الطلب إلى المتجر، حيث
+                يتم خصم هذه التكلفة لصالح شركات الشحن.
+              </li>
+            </ul>
+            <h3>الحالات التي لا يتم إعادة المنتجات بها:</h3>
+            <ul>
+              <li>
+                عند تقديم طلب الإرجاع بعد الوقت المحدد، وهو 3 أيام من تاريخ
+                الاستلام بخصوص المنتجات.
+              </li>
+              <li>
+                عند استخدام المنتج، أو عند تلفه، أو عندما لا يكون في نفس الحالة
+                التي قمت باستلامها به. منتجات مستهلكه تم استخدامها.
+              </li>
+              <li>منتجات تم العبث بها أو إزالة أرقامها التسلسلية.</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
     <!-- Start Page Content -->
+
+    <!-- Start Testimonials -->
+    <section class="testimonials-section home-section">
+      <div class="container">
+        <div class="testimonials-slider custom-slider">
+          <div class="slider-content">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/1.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">عبدالله أحمد</h3>
+                      <div class="testimonial-rate">
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="testimonial-content">
+                        <p>متجر ممتاز</p>
+                        <span>13/5/2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/3.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">ليلى محمد</h3>
+                      <div class="testimonial-content">
+                        <p>هل المتجر جيد؟</p>
+                        <span>13/5/2024</span>
+                      </div>
+                      <div class="testimonial-answer">
+                        <img src="images/icons/logo.svg" alt="answer" />
+                        <p>نعم</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/2.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">عاصم محمد</h3>
+                      <div class="testimonial-rate">
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star active"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="testimonial-content">
+                        <p>متجر ممتاز</p>
+                        <span>13/5/2024</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="item-container">
+                      <div class="testimonial-img">
+                        <img
+                          src="images/testimonials/3.jpg"
+                          class="img-cover"
+                        />
+                      </div>
+                      <h3 class="testimonial-name">ليلى محمد</h3>
+                      <div class="testimonial-content">
+                        <p>هل المتجر جيد؟</p>
+                        <span>13/5/2024</span>
+                      </div>
+                      <div class="testimonial-answer">
+                        <img src="images/icons/logo.svg" alt="answer" />
+                        <p>نعم</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-pagination"></div>
+        </div>
+        <div class="btns-content">
+          <a
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#addQuestionModal"
+            class="default-btn"
+          >
+            أضف سؤالك
+          </a>
+          <a href="testimonials.html" class="default-btn secondary-btn">
+            عرض الكل
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- End Testimonials -->
 
     <!-- Start Footer -->
     <footer class="footer-section">
@@ -482,20 +421,35 @@
     <!-- End Footer -->
 
     <!-- Start Modal -->
-    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="addQuestionModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">أضف سؤالك</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fas fa-times-circle"></i>
+            </button>
+          </div>
           <div class="modal-body">
-            <div class="success-content">
-              <i class="fas fa-check-circle fa-sharp"></i>
-              <h2 class="modal-title">تم إتمام الحجز بنجاح</h2>
-              <div class="btns-content">
-                <a href="account/orders_list.html" class="form-submit secondary-btn">
-                  متابعة الطلب
-                </a>
-                <a href="index.html" class="form-submit"> العودة للرئيسية </a>
+            <form class="modal-from">
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  placeholder="ادخل سؤالك"
+                ></textarea>
               </div>
-            </div>
+              <button class="form-submit">إرسال</button>
+            </form>
           </div>
         </div>
       </div>
@@ -509,9 +463,5 @@
     <script src="js/nouislider.min.js"></script>
     <script src="js/svg.js"></script>
     <script src="js/main.js"></script>
-
-    <script src="js/FullCalendar/index.global.min.js"></script>
-    <script src="js/FullCalendar/locales-all.global.min.js"></script>
-    <script src="js/FullCalendar/init.js"></script>
   </body>
 </html>
