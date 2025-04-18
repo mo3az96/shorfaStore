@@ -284,3 +284,17 @@ function stepQty(btn, direction) {
 
   $(input).trigger("change");
 }
+
+function additemFiles(input) {
+  var preview = $(input).parents(".form-group").find(".file-preview");
+  var files = input.files;
+  preview.html("");
+  for (let i = 0; i < files.length; i++) {
+    var val = input.files[i];
+    var name = val.name;
+    var img = (window.URL ? URL : webkitURL).createObjectURL(val);
+    preview.append(
+      "<div class='img-pre'><img src='" + img + "' alt='" + name + "' class='img-contain'></div>"
+    );
+  }
+}
